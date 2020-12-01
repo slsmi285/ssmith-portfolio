@@ -1,40 +1,44 @@
-//import sunrise from './sunrise.svg';
-//import './App.css';
-//import Hero from './components/Hero';
-//import React, { Component } from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Contact from "./pages/Contact";
-import About from "./pages/About";
-import Home from "./pages/Home";
-//import Modal from ".components/Modal";
-import Projects from "./pages/Projects";
-import Navbar from "./components/Navbar";
-//import Footer from "./components/Footer";
-import Wrapper from "./components/Wrapper";
+import { Link } from 'react-router-dom';
+import Main from "./components/main";
+import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 
 
 
 
 
-function App() {
-  return (
-    <Router>
-    <div>
-      <Navbar />
-      <Wrapper>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about" component={About} />
-      <Route exact path="/projects" component={Projects} />
-      <Route exact path="/contact" component={Contact} />
-      </Wrapper>
-   
-        
-      
-    </div>
-    </Router>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="demo-big-content">
+        <Layout>
+          <Header className="header-color" title="Title" scroll>
+            <Navigation>
+              <Link to="/resume">Resume</Link>
+              <Link to="/aboutme">About Me</Link>
+              <Link to="/projects">Projects</Link>
+              <Link to="/contact">Contact</Link>
+            </Navigation>
+          </Header>
+          <Drawer title="Title">
+            <Navigation>
+              <Link to="/resume">Resume</Link>
+              <Link to="/aboutme">About Me</Link>
+              <Link to="/projects">Projects</Link>
+              <Link to="/contact">Contact</Link>
+            </Navigation>
+          </Drawer>
+          <Content>
+            <div className="page-content" />
+            <Main />
+            </Content>
+        </Layout>
+      </div>
+    );
+  }
 }
 
 export default App;

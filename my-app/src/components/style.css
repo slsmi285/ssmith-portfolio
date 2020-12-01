@@ -1,13 +1,21 @@
 nav.navbar.navbar-default {
     margin-bottom: 0;
   }
+.navbar-nav {
+
+}
+
+.navbar-brand{
+  margin-right: auto;
+}
 
   .wrapper {
     min-height: 100%;
     padding-bottom: 100px;
   }
   .hero {
-    height: 500px;
+    background-image: url('../sunrise..jpg');
+    height: 100%;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -30,7 +38,7 @@ nav.navbar.navbar-default {
     z-index: 2;
   }
   
-  .hero h1, .hero h2 {
+  /* .hero h1, .hero h2 {
     color: white;
   }
   
@@ -38,14 +46,14 @@ nav.navbar.navbar-default {
     font-size: 60px;
     padding-top: 140px;
     margin-top: 0;
-  }
+  } */
   .card {
     background-size: cover;
     background-position: center;
     background-clip: content-box;
     border: 6px solid white;
-    height: 400px;
-    width: 400px;
+    height: 200px;
+    width: 200px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     position: relative;
     margin: 0 auto;
@@ -53,7 +61,7 @@ nav.navbar.navbar-default {
   }
   
   .card .fa-spinner {
-    font-size: 180px;
+    font-size: 120px;
     position: absolute;
     left: 25%;
     top: 25%;
