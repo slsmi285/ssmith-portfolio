@@ -1,9 +1,10 @@
 import React from 'react';
 import LandingPage from './landingpage';
 import AboutMe from './aboutme';
+import Projects from './projects';
 import Contact from './contact';
 import Resume from './resume';
-import { Switch, Route } from 'react-router-dome';
+import { Switch, Route } from 'react-router-dom';
 
 const Main = () => (
     <Switch>

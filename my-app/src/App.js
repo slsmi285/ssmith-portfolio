@@ -1,7 +1,5 @@
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React, { Component } from "react";
+import './App.css';
 import { Link } from 'react-router-dom';
 import Main from "./components/main";
 import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
