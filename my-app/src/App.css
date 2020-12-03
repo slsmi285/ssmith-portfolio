@@ -13,14 +13,60 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .projects-grid {
   display: flex;
+  
 }
 
+.resume-right-col {
+  background: #27221f;
+  color: white;
+  padding: 2em;
+}
+
+.contact-body {
+  margin: auto;
+  
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding-top: 2em;
+}
+.contact-grid {
+  text-align: center;
+  justify-content: center;
+  width: 80%;
+  height: 550px;
+  background: white;
+  color: black;
+  
+  margin-bottom: 20px;
+
+}
+
+.contact-grid h2 {
+  font-family: 'Anton', sans-serif;
+}
+.contact-grid p {
+  font-family: 'Oxygen', sans-serif;
+  font-weight: bold;
+}
+.contact-grid hr {
+  border-top: 5px dotted black;
+  width: 50%;
+  margin: auto;
+}
 .avatar-img {
   height: 250px;
   padding-top: 5em;
+}
+.contact-list i {
+  font-size: 66px;
+  padding-right: 5rem;
 }
 
 .banner-text {

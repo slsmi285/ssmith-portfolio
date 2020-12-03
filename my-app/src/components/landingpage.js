@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
+import Skills from './skills';
 
 class Landing extends Component {
     render() {
@@ -16,7 +17,16 @@ class Landing extends Component {
                     <h1>Full Stack Web Developer</h1>
 
                     <hr/>
-                    <p>HTML/CSS | Bootstrap |</p>
+                    <h2>Skills</h2>
+                    <Skills 
+                    skill="Back-End Technology (Node.js, Express Servers, APIs"
+                    
+                    skill="UI/UX Design (HTML5/CSS3, Bootstrap, React.js"
+                    skill="Databases (MySql, MongoDB, Firebase)"
+                    skill="Problem Solving (I love to solve puzzles)"
+                    skill="Team Oriented (Experienced team player, ready to contribute and collaborate)"
+                    
+                    />
                     <div className="social-links">
 
                       {/* LinkedIn */}

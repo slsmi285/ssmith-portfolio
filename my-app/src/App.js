@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './App.css';
 import { Link } from 'react-router-dom';
-import Main from "./components/main";
+import Home from "./components/home";
 import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 
 
@@ -13,16 +13,18 @@ class App extends Component {
     return (
       <div className="demo-big-content">
         <Layout>
-          <Header className="header-color" title="Title" scroll>
+          <Header className="header-color" title="Sandra Smith" scroll>
             <Navigation>
+              <Link to="/">Home</Link>
               <Link to="/resume">Resume</Link>
               <Link to="/aboutme">About Me</Link>
               <Link to="/projects">Projects</Link>
               <Link to="/contact">Contact</Link>
             </Navigation>
           </Header>
-          <Drawer title="Title">
+          <Drawer title="Sandra Smith">
             <Navigation>
+              <Link to="/">Home</Link>
               <Link to="/resume">Resume</Link>
               <Link to="/aboutme">About Me</Link>
               <Link to="/projects">Projects</Link>
@@ -31,7 +33,7 @@ class App extends Component {
           </Drawer>
           <Content>
             <div className="page-content" />
-            <Main />
+            <Home />
             </Content>
         </Layout>
       </div>
