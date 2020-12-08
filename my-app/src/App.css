@@ -14,7 +14,36 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
   width: 100%;
   height: 100%;
   overflow: scroll;
+  /* margin-top: 50px; */
   -webkit-overflow-scrolling: touch;
+}
+.banner-text {
+  background-color: black;
+  opacity: .8;
+  width: 75%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.banner-text h2 {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  margin-top: 50px;
+  padding-top: 20px;
+}
+
+.banner-text hr {
+  border-top: 5px dotted white;
+  width: 50%;
+  margin: auto;
+
+}
+.banner-text p {
+  color: white;
+  font-size: 20px;
+  padding: 1em;
+
 }
 .projects-grid {
   display: flex;
@@ -68,41 +97,112 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
   font-size: 66px;
   padding-right: 5rem;
 }
+.profile img {
+  width: 40%;
+  display: flex;
 
-.banner-text {
-  background-color: black;
-  opacity: .8;
-  width: 75%;
-  margin: auto;
-  border-radius: 10px;
 }
+.about-body {
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* /* text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  /* margin-top: 50px; */
+  -webkit-overflow-scrolling: touch;
 
-.banner-text h1 {
-  font-size: 66px;
+}
+.profile img {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  margin-left: 175px;
+  border: 10px solid black;
+  margin-top: 100px;
+
+}
+.about-header {
+  color: white;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 4em;
   font-weight: bold;
-  color: white;
+  margin-top: 20px;
+  display: flex;
+  margin-left: 50px;
+  width: 100%;
+  
 }
-
-.banner-text hr {
-  border-top: 5px dotted white;
-  width: 50%;
-  margin: auto;
-
-}
-.banner-text p {
-  color: white;
+.about-data li {
+  font-family: 'Oxygen', sans-serif;
   font-size: 20px;
-  padding: 1em;
+  color: white;
+  font-weight: lighter;
+  padding-top: 10px;
+  /* margin-top: 10px; */
+  display: flex;
+  text-align: center;
+}
+.about-content {
+  font-family: 'Arial tall', sans-serif;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  width: 90%;
+  text-align: center;
 
 }
+
+
 .social-links {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 20%;
   margin: auto;
 }
 .social-links i {
   color: white;
-  font-size: 5em;
+  font-size: 2em;
   padding: 8px;
+}
+.skill-lists p {
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+
+}
+.skill-lists h3 {
+  text-align: center;
+  color: white;
+}
+.skill-lists i {
+  font-size: 1.5em;
+  color: white;
+  /* display: flex; */
+  justify-content: space-between;
+  width: auto;
+  align-items: center;
+}
+.skill-lists p {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 9px;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  /* text-align: center; */
+}
+.skill-lists cell {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+ 
+  
 }

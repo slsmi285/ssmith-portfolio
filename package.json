@@ -22,6 +22,8 @@
     "jquery": "^3.5.1",
     "jquery-ui": "^1.12.1",
     "popper.js": "^1.16.1",
+    "react-dat-gui": "^4.0.3",
+    "react-fluid-animation": "^1.0.1",
     "react-mdl": "^2.1.0",
     "react-router-dom": "^5.2.0",
     "reactstrap": "^8.7.1"
