@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Cell, ListItem, List, ListItemContent } from 'react-mdl';
+import vangogh_irises from '../assets/vangogh_irises.webp';
 
 
 class Contact extends Component {
@@ -9,13 +10,13 @@ class Contact extends Component {
                 <Grid className="contact-grid">
                     <Cell col={6}>
                         <h2>Sandra Smith</h2>
-                        <img src="https://cdn2.iconfinder.com/data/icons/avatar-2/512/Fred_man_512.png"
-                            alt="avatar"
-                            style={{ height: '150px' }}
+                        <img src={vangogh_irises}
+                            alt="vangogh"
+                            style={{ height: '250px', border: '1px solid black' }}
                         />
-                        <p style={{ width: '75%', margin: 'auto', paddingTop: '1em' }}>
-                            Lorem epsom.....
-                        </p>
+                        {/* <p style={{ width: '75%', margin: 'auto', paddingTop: '1em' }}>
+                            
+                        </p> */}
                     </Cell>
                     <Cell col={6}>
                         <h2>Contact Me</h2>
@@ -36,19 +37,7 @@ class Contact extends Component {
                                    </ListItemContent>
                             </ListItem>
 
-                            {/* <ListItem>
-                            <ListItemContent style={{fontSize: '25px', fontFamily: 'Anton'}}>
-                                    <i className="fa fa-phone-square" aria-hidden="true"/>
-                                   (865) 696-1106e
-                                   </ListItemContent>
-                            </ListItem>
-
-                            <ListItem>
-                            <ListItemContent style={{fontSize: '25px', fontFamily: 'Anton'}}>
-                                    <i className="fa fa-phone-square" aria-hidden="true"/>
-                                   (865) 696-1106
-                                   </ListItemContent>
-                            </ListItem> */}
+                     
                         </List>
                         </div>
                         

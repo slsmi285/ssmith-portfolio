@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import './App.css';
 import { Link } from 'react-router-dom';
-import Home from "./components/home";
+import Home from './components/home.js';
 import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 
 
@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="demo-big-content">
         <Layout>
-          <Header className="header-color" title="Sandra Smith" scroll>
+        <Header  style={{border: '3px solid teal'}} className="header-color" title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">Sandra Smith</Link>} scroll>
             <Navigation>
               <Link to="/">Home</Link>
               <Link to="/resume">Resume</Link>
@@ -22,7 +22,7 @@ class App extends Component {
               <Link to="/contact">Contact</Link>
             </Navigation>
           </Header>
-          <Drawer title="Sandra Smith">
+          <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}} to="/">Sandra Smith</Link>}>
             <Navigation>
               <Link to="/">Home</Link>
               <Link to="/resume">Resume</Link>

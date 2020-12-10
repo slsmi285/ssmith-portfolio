@@ -1,12 +1,13 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import LandingPage from './landingpage';
 import AboutMe from './aboutme';
 import Projects from './projects';
 import Contact from './contact';
 import Resume from './resume';
-import { Switch, Route } from 'react-router-dom';
 
-const Main = () => (
+
+const Home = () => (
     <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/aboutme" component={AboutMe} />
@@ -16,4 +17,4 @@ const Main = () => (
     </Switch>
 )
 
-export default Main;
+export default Home;
