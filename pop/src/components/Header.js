@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
-        fontFamily: 'Nunito',
+        fontFamily: 'Raleway',
     },
     appbar: {
         background: 'none',
@@ -54,8 +54,8 @@ export default function Header() {
         <div className={classes.root} id="header">
             <AppBar className={classes.appbar} elevation={0}>
                 <Toolbar className={classes.appbarWrapper}>
-                    <h1 className={classes.appbarTitle}>My<span className={classes.colorText}>
-                        Island</span></h1>
+                    <h1 className={classes.appbarTitle}>Sandra Smith: <span className={classes.colorText}>
+                        My Portfolio</span></h1>
 
                     <IconButton>
                         <SortIcon className={classes.icon} />
@@ -64,7 +64,7 @@ export default function Header() {
             </AppBar>
             <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapseHeight={50}>
                 <div className={classes.container}>
-                    <h1 className={classes.title}>Welcome to <br /> My <span className={classes.colorText}>Island</span></h1>
+                    <h1 className={classes.title}>I am Sandra Smith <br /> Full Stack <span className={classes.colorText}>Web Developer</span></h1>
                     <Scroll to="place-to-visit" smooth={true}>
                         <IconButton>
                             <ExpandMoreIcon className={classes.goDown} />

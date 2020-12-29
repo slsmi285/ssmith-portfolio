@@ -4,6 +4,7 @@ import ImageCard from './ImageCard';
 import places from '../static/places';
 import useWindowPosition from '../hook/useWindowPosition';
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         minHeight: '100vh',
@@ -24,6 +25,8 @@ export default function PlaceToVisit() {
             <ImageCard place={places[0]} checked={checked} />
             <ImageCard place={places[1]} checked={checked} />
             <ImageCard place={places[2]} checked={checked} />
+            
         </div>
+        
     )
 }

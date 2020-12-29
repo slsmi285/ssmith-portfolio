@@ -9,22 +9,22 @@ import { Collapse } from '@material-ui/core';
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 645,
+        maxWidth: 240,
         background: 'rgba(0,0,0,0.5)',
-        margin: '20px',
+        margin: '10px',
     },
     media: {
-        height: 440,
+        height: 230,
     },
     title: {
         fontFamily: 'Nunito',
         fontWeight: 'bold',
-        fontSize: '2rem',
+        fontSize: '1.5rem',
         color: '#fff',
     },
     desc: {
         fontFamily: 'Nunito',
-        fontSize: '1.1rem',
+        fontSize: '0.75rem',
         color: '#ddd',
     },
 });
@@ -34,12 +34,12 @@ export default function ImageCard({ place, checked }) {
 
     return (
         <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})}>
-        <Card className={classes.root}>
-            
+            <Card className={classes.root}>
+
                 <CardMedia
                     className={classes.media}
                     image={place.imageUrl}
-                    title="dahlia"/>
+                    title="dahlia" />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2" className={classes.title}>
                         {place.title}
@@ -48,9 +48,9 @@ export default function ImageCard({ place, checked }) {
                         {place.description}
                     </Typography>
                 </CardContent>
-            
-            
-        </Card>
+
+
+            </Card>
         </Collapse>
     )
 }

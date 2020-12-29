@@ -4,7 +4,7 @@ const places = [
         description:
         "Pink Dhalhia's come in all shapes and sizes.",
         imageUrl: process.env.PUBLIC_URL + '/assets/dahlia1.jpg',
-        // direction: 'left',
+        
         time: 1500,
     },
     {
@@ -12,7 +12,7 @@ const places = [
         description:
         "Dhalhia's come in all shapes and sizes.",
         imageUrl: process.env.PUBLIC_URL + '/assets/dahlia2.jpg',
-        // direction: 'right',
+        
         time: 1500,  
     },
     {
@@ -20,7 +20,7 @@ const places = [
         description:
         "Dhalhia's come in all shapes and sizes.",
         imageUrl: process.env.PUBLIC_URL + '/assets/dahlia1.jpg',
-        // direction: 'right',
+        
         time: 1500,  
     }
 
