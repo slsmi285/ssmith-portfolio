@@ -1,28 +1,32 @@
 const places = [
     {
-        title: 'About Me',
+        title: 'Covid-19 Tracker',
         description:
-        "Pink Dhalhia's come in all shapes and sizes.",
+        "Enter the state you are traveling to to find out covid-19 status and state info.",
+        demo: "demo: #",
+        code: "code: #",
         imageUrl: process.env.PUBLIC_URL + '/assets/dahlia1.jpg',
         
         time: 1500,
     },
     {
-        title: 'Projects',
+        title: 'Cosmic Cocktails',
         description:
-        "Dhalhia's come in all shapes and sizes.",
+        "Search a cocktail recipe by its name, or search for something new by entering a letter or ingredient.",
+        demo: "demo: #",
+        code: "code: #",
         imageUrl: process.env.PUBLIC_URL + '/assets/dahlia2.jpg',
         
         time: 1500,  
-    },
-    {
-        title: 'Contact Me',
-        description:
-        "Dhalhia's come in all shapes and sizes.",
-        imageUrl: process.env.PUBLIC_URL + '/assets/dahlia1.jpg',
-        
-        time: 1500,  
     }
+    // {
+    //     title: 'Tic Tac Toe',
+    //     description:
+    //     "Dhalhia's come in all shapes and sizes.",
+    //     imageUrl: process.env.PUBLIC_URL + '/assets/dahlia1.jpg',
+        
+    //     time: 1500,  
+    // }
 
 ];
 export default places;

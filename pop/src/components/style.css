@@ -1,0 +1,145 @@
+.App {
+  text-align: center;
+  margin-top: -250px;
+  /* border-bottom: 1px solid gray; */
+  width: 100%;
+  padding: 5px;
+  
+  
+}
+
+.content img {
+  
+  margin-left: 10px;
+  width: 110px;
+  height: 160px;
+  float: left;
+  margin-right: 20px;
+}
+.buttonName {
+  background: purple;
+  color: white;
+  font-family: Raleway;
+  min-height: 15px;
+  display: 'center';
+  
+}
+.skills {
+  text-align: center;
+  border-bottom: 1px solid gray;
+}
+
+.modal {
+    /* font-size: 12px; */
+    margin-top: -350px;
+    background-color: pink;
+  }
+  .modal > .header {
+
+    width: 100%;
+    border-bottom: 1px solid gray;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    
+    font-family: Raleway;
+    
+  }
+  .modal > .content {
+    width: 98%;
+    align-content: center;
+    padding: 10px 5px;
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: bold;
+    float: right;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+  .modal > .actions {
+    margin: auto;
+  }
+  .modal > .actions {
+    width: 98%;
+    padding: 10px 5px;
+    text-align: center;
+  }
+  .modal > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: 10px;
+    top: 150px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+    /* margin-right: 40px; */
+  }
+
+  .Footer {
+    text-align: center;
+    margin-bottom: -400px;
+    /* border-bottom: 1px solid gray; */
+    width: 100%;
+    padding: 5px;
+    
+  }
+  .buttonFoot {
+    background: purple;
+    color: white;
+    font-family: Raleway;
+    min-height: 15px;
+    border-style: round;
+  }
+  
+  
+  .modalfoot {
+      /* font-size: 12px; */
+      margin-top: 500px;
+    }
+    .modalfoot > .foot {
+      width: 100%;
+      border-bottom: 1px solid gray;
+      font-size: 15px;
+      font-weight: bolder;
+      text-align: center;
+      padding: 5px;
+      font-family: Raleway;
+      
+    }
+    .modalfoot > .contentfoot {
+      width: 98%;
+      align-content: center;
+      padding: 10px 5px;
+      font-family: Raleway;
+      font-size: 12px;
+      font-weight: bold;
+      float: right;
+      margin-right: 10px;
+      margin-top: 20px;
+    }
+    .modalfoot > .actions {
+      margin: auto;
+    }
+    .modalfoot > .actions {
+      width: 98%;
+      padding: 10px 5px;
+      text-align: center;
+    }
+    .modalfoot > .closefoot {
+      cursor: pointer;
+      position: absolute;
+      display: block;
+      padding: 2px 5px;
+      line-height: 20px;
+      right: -20px;
+      top: 450px;
+      font-size: 24px;
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid #cfcece;
+      /* margin-right: 40px; */
+    }

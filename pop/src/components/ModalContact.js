@@ -1,9 +1,9 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
 import { makeStyles } from '@material-ui/core/styles';
-import Content from "./Content.js";
-import "./style.css";
+import Contact from './Contact';
 
+import "./style.css";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -21,20 +21,20 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
- function Modal() {
+ function ModalContact() {
 
  
-  
+ 
     
     return (
        
         
-
+    
   
-      <div className="App">
+      <div className="Footer">
         
-        <Popup modal trigger={<button className="buttonName"><h1>About Me</h1></button>}>
-        {close => <Content close={close} />}
+        <Popup modal trigger={<button className="buttonFoot"><h1>Contact Me</h1></button>}>
+        {close => <Contact close={close} />}
       </Popup>
       </div>
       
@@ -42,4 +42,4 @@ const useStyles = makeStyles((theme) => ({
 
     }
 
-    export default Modal;
+    export default ModalContact;
