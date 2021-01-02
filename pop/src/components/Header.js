@@ -68,7 +68,7 @@ export default function Header() {
                         My Portfolio</span></h1>
 
                     <IconButton>
-                        <SortIcon className={classes.icon} style={{ background: "none", padding: "5px", margin: "0 auto" }}/>
+                        {/* <SortIcon className={classes.icon} style={{ background: "none", padding: "5px", margin: "0 auto" }}/> */}
                        <ScrollTotop />
                            
                     </IconButton>

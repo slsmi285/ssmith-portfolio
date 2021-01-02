@@ -32,7 +32,7 @@
 .modal {
     /* font-size: 12px; */
     margin-top: -350px;
-    background-color: pink;
+    background-color: rgb(167, 64, 141);
   }
   .modal > .header {
 
@@ -66,14 +66,16 @@
   }
   .modal > .close {
     cursor: pointer;
-    position: absolute;
+    position: z-index;
+    width: 25px;
+    float: right;
     display: block;
     padding: 2px 5px;
     line-height: 20px;
     right: 10px;
     top: 150px;
     font-size: 24px;
-    background: #ffffff;
+    background: gray;
     border-radius: 18px;
     border: 1px solid #cfcece;
     /* margin-right: 40px; */

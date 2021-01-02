@@ -53,9 +53,10 @@ export default function ImageCard({ place, checked }) {
                         {place.description}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p" className={classes.desc}>
-                        {place.demo} || {place.code}
+                        {place.info} || {place.code}
                     </Typography>
                 </CardContent>  
+                
 
 
             </Card>

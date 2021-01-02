@@ -1,11 +1,11 @@
 const places = [
     {
-        title: 'Covid-19 Tracker',
+        title: 'C-19 Tracker',
         description:
         "Enter the state you are traveling to to find out covid-19 status and state info.",
-        demo: "demo: #",
-        code: "code: #",
         imageUrl: process.env.PUBLIC_URL + '/assets/dahlia1.jpg',
+        info: '(https://slsmi285.github.io/c19-tracker/)',
+        code: '<a href= "https://github.com/slsmi285/c19-tracker" target="_blank">code<a/>',
         
         time: 1500,
     },
@@ -13,8 +13,6 @@ const places = [
         title: 'Cosmic Cocktails',
         description:
         "Search a cocktail recipe by its name, or search for something new by entering a letter or ingredient.",
-        demo: "demo: #",
-        code: "code: #",
         imageUrl: process.env.PUBLIC_URL + '/assets/dahlia2.jpg',
         
         time: 1500,  

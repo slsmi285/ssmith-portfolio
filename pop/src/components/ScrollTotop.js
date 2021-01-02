@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { MdHome } from "react-icons/md";
 
 import { animateScroll as scroll } from 'react-scroll';
 
@@ -12,7 +13,7 @@ class Scrolltotop extends Component {
 
         return (
             <div className="move-top-wrap">                 
-                <div onClick={this.ScrollTo} class="move-top">↑</div> 
+                <div onClick={this.ScrollTo} class="move-top" ><MdHome /></div> 
             </div>
         );
 
