@@ -1,11 +1,15 @@
+
+
+
+
 const places = [
     {
         title: 'C-19 Tracker',
         description:
         "Enter the state you are traveling to to find out covid-19 status and state info.",
         imageUrl: process.env.PUBLIC_URL + '/assets/dahlia1.jpg',
-        info: '(https://slsmi285.github.io/c19-tracker/)',
-        code: '<a href= "https://github.com/slsmi285/c19-tracker" target="_blank">code<a/>',
+        // link: www.slsmi285.github.io/c19-tracker,
+        // code: www.github.com/slsmi285/c19-tracker,
         
         time: 1500,
     },

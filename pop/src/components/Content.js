@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import profile from './profile.jpg';
+// import bwdahlia from './bwdahlia.jpg';
 
 export default ({ close }) => {
   return (
@@ -9,7 +10,7 @@ export default ({ close }) => {
         &times;
     </a>
       <div className="header"></div>
-
+          
 
       <div className="content">
         <div className="img">
@@ -26,13 +27,15 @@ export default ({ close }) => {
       While I enjoyed photographing weddings, I now love to photograph landscape and pets.  My greatest subjects are my two newest rescues, two boxers, Bailey and Buster.
       <br /><br />
       Finally, my latest weekend passion is gardening, all year round.  I am taking on a a huge project to design and landscape my backyard to create an English style garden with various themes.
-    </div>
-      <div className="skills">
-        <h3>Skills</h3>
-        <p>HTML | CSS | Nodejs | Algorithms | Big O Notation | Javascript | Bootstrap | Handlebars<br />
+    
+      
+        <h2 className="skills">Skills</h2>
+        <p className="skillsets">HTML | CSS | Nodejs | Algorithms | Big O Notation | Javascript | Bootstrap | Handlebars |
     Reactjs | MySql | Firebase | MongoDB |Heroku | Git | Passport | MERN | </p>
-      </div>
     </div>
+      </div>
+
+    
   );
 };
 
