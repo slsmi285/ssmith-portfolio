@@ -9,14 +9,6 @@
 }
 
 
-.content img {
-  
-  margin-left: 10px;
-  width: 170px;
-  height: 220px;
-  float: left;
-  margin-right: 20px;
-}
 .buttonName {
   background: purple;
   color: white;
@@ -25,55 +17,7 @@
   display: 'center';
   
 }
-.skills {
-  margin-top: 30px;
-  padding-top: 25px;
-  margin-right: 100px;
-  text-align: center;
-  font-weight: bold;
-  color: gray;
-  border-top: 1px solid gray;
-  
-  
-} 
-.skillsets {
-  justify-content: center;
-  text-align: center;
-  color: gray;
-  margin-left: 20px;
 
-}
-
-.modal {
-  
-  margin-top: -375px;
-  background-color: rgb(73, 19, 56);
-  height: 325px;
-  border: 2px solid limegreen;
-  }
-  .modal > .header {
-
-    width: 100%;
-    border-bottom: 1px solid gray;
-    font-size: 20px;
-    font-weight: bolder;
-    text-align: center;
-    
-    font-family: Raleway;
-    
-  }
-  .modal > .content {
-    width: 98%;
-    align-content: center;
-    padding: 10px 5px;
-    font-family: Raleway;
-    font-size: 13px;
-    font-weight: bold;
-    float: right;
-    margin-right: 20px;
-        color: white;
-
-  }
   .modal > .actions {
     margin: auto;
   }
@@ -82,29 +26,15 @@
     padding: 10px 5px;
     text-align: center;
   }
-  .modal > .close {
-    cursor: pointer;
-    position: z-index;
-    width: 25px;
-    float: right;
-    display: block;
-    padding: 2px 5px;
-    line-height: 20px;
-    right: 10px;
-    top: 150px;
-    font-size: 24px;
-    background: gray;
-    border-radius: 18px;
-    border: 2px solid #cfcece;
-    /* margin-right: 40px; */
-  }
+
 
   .Footer {
     text-align: center;
     margin-bottom: -400px;
-    /* border-bottom: 1px solid gray; */
-    width: 100%;
+    border-bottom: 1px solid gray;
+     width: 100%;
     padding: 5px;
+    
     
   }
   .buttonFoot {
@@ -113,61 +43,37 @@
     font-family: Raleway;
     min-height: 15px;
     border-style: round;
+    /* display: flex; */
+    align-items: center;
+    
   }
   
+  .skilblock {
+    
+    
+    justify-content: center;
+    display: inline;
+    
+    cursor: none;
+    
+    color: white;
+
+   
+  } 
+  .titleskl{
+    font-size: 18px;
+    color: white;
+    
+  }
+ 
+  span {
+    border: hidden;
+   
+  }
+
+  span.typed-cursor {
+   
+    visibility: hidden;
+  }
   
-  .modalfoot {
-      /* font-size: 12px; */
-      margin-top: 500px;
-      /* border: 2px double rgb(100, 20, 98); */
-      width: 250px;
-     
-    }
-    .modalfoot > .foot {
-      width: 100%;
-      border-bottom: 1px solid limegreen;
-      font-size: 15px;
-      font-weight: bolder;
-      text-align: center;
-      padding: 5px;
-      font-family: Raleway;
-      
-    }
-    .modalfoot {
-      width: 98%;
-      margin-left: 10px;
-      
-      font-family: Raleway;
-      font-size: 20px;
-      font-weight: bold;
-      color: white;
-      /* margin-right: 10px;
-      margin-top: 20px; */
-      align-items: center;
-    }
-    p {
-     /* align-items: center; */
-      margin-left: 20px;
-    }
-    .modalfoot > .actions {
-      margin: auto;
-    }
-    .modalfoot > .actions {
-      width: 98%;
-      padding: 10px 5px;
-      text-align: center;
-    }
-    .modalfoot > .closefoot {
-      cursor: pointer;
-      float: right;
-      /* position: absolute; */
-      padding: 2px 5px;
-      line-height: 15px;
-      margin-top: 1px;
-      top: 630px;
-      font-size: 24px;
-      background: rgb(159, 65, 159);
-      border-radius: 18px;
-      border: 1px solid #cfcece;
-     
-    }
+ 

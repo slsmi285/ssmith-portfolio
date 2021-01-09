@@ -15,15 +15,16 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("sm")]: {
             flexDirection: 'column',
         },
+   
        
-    }
+    },
 
 }));
 
 
  function ModalContact() {
 
- 
+  // const classes = useStyles();
  
     
     return (
@@ -31,9 +32,11 @@ const useStyles = makeStyles((theme) => ({
         
     
   
-      <div className="Footer">
-        
-        <Popup modal trigger={<button className="buttonFoot"><h1>Contact Me</h1></button>}>
+      <div className="Footer"> 
+
+        <Popup modal trigger={<button className="buttonFoot">
+          <h1>Contact Me</h1>
+          </button>}>
         {close => <Contact close={close} />}
       </Popup>
       </div>
