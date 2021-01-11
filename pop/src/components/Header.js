@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, IconButton, Toolbar, Collapse } from '@material-ui/core';
+import { AppBar, IconButton, Toolbar, Collapse, Box, Link, Nav } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Link as Scroll } from 'react-scroll';
 import ScrollTotop from './ScrollTotop';
+import Skills from './Skills';
+import Popup from 'reactjs-popup';
+import "./style.css";
+import Content from "./Content.js";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -12,7 +16,12 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
+        margin: '5px',
         fontFamily: 'Raleway',
+        // minHeight: '10vh',
+        [theme.breakpoints.down("sm")]: {
+            flexDirection: 'column',
+        },
 
     },
     appbar: {
@@ -47,8 +56,13 @@ const useStyles = makeStyles((theme) => ({
     goDown: {
         color: '#5AFF3D',
         fontSize: '3rem',
-        
-    }
+
+    },
+    skillBlock: {
+        justify: 'center',  
+        marginLeft: '100px',
+        // marginBottom: '20px',
+    },
 }));
 export default function Header() {
     // render() {
@@ -57,35 +71,56 @@ export default function Header() {
     useEffect(() => {
         setChecked(true);
     }, []);
-    
+
     return (
         <div className={classes.root} id="header">
             <AppBar className={classes.appbar} elevation={0}>
                 <Toolbar className={classes.appbarWrapper}>
                     <h1 className={classes.appbarTitle}>Sandra Smith: <span className={classes.colorText}>
                         My Portfolio</span></h1>
+                    {/* <ul>
+                        <Link>About Me</LInk>
+                        <Link>Projects</Link>
+                        <Link>Contact</LInk>
+                    </ul> */}
+                    <div className="App">
+        
+        <Popup modal trigger={<button className="buttonMe"><h3>About Me</h3></button>}>
+        {close => <Content close={close} />}
+      </Popup>
+      </div>
 
                     <IconButton>
-                        {/* <SortIcon className={classes.icon} style={{ background: "none", padding: "5px", margin: "0 auto" }}/> */}
-                       <ScrollTotop />
-                           
+                       
+                        <ScrollTotop />
+
                     </IconButton>
                 </Toolbar>
             </AppBar>
+
+            {/* <Box> */}
             <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapseHeight={50}>
-            <div className={classes.container}>
-          <h1 className={classes.title}>
-            Sandra Smith <br />
+                <div className={classes.container}>
+                    <h1 className={classes.title}>
+                        Sandra Smith <br />
             Web<span className={classes.colorText}>Developer</span>
-          </h1>
-                    <Scroll to="place-to-visit" smooth={true}>
+            
+                        <div className={classes.skillBlock}>
+                            <Skills />
+                        </div>
+                        
+
+                    </h1>
+                    {/* <br /> */}
+                    <Scroll to="place-to-visit" smooth={true}> 
                         <IconButton>
                             <ExpandMoreIcon className={classes.goDown} />
                         </IconButton>
                     </Scroll>
-                
+
                 </div>
             </Collapse>
+            {/* </Box> */}
         </div>
     );
 }

@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
   },
+  
 
 
 }));
@@ -29,7 +30,7 @@ function App() {
 
 
 
-      <Modal />
+      {/* <Modal /> */}
       <PlaceToVisit />
       <ModalContact />
       

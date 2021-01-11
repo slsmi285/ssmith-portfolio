@@ -1,45 +1,45 @@
-import React from 'react';
-import Popup from 'reactjs-popup';
-import { makeStyles } from '@material-ui/core/styles';
-import Content from "./Content.js";
-import "./style.css";
+// import React from 'react';
+// import Popup from 'reactjs-popup';
+// import { makeStyles } from '@material-ui/core/styles';
+// import Content from "./Content.js";
+// import "./style.css";
 
 
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        minHeight: '8vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        [theme.breakpoints.down("sm")]: {
-            flexDirection: 'column',
-        },
+// // const useStyles = makeStyles((theme) => ({
+// //     root: {
+// //         minHeight: '8vh',
+// //         display: 'flex',
+// //         justifyContent: 'center',
+// //         alignItems: 'center',
+// //         [theme.breakpoints.down("sm")]: {
+// //             flexDirection: 'column',
+// //         },
        
-    }
+// //     }
 
-}));
+// // }));
 
 
- function Modal() {
+//  function Modal() {
 
  
   
     
-    return (
+//     return (
        
         
 
   
-      <div className="App">
+//       <div className="App">
         
-        <Popup modal trigger={<button className="buttonName"><h1>About Me</h1></button>}>
-        {close => <Content close={close} />}
-      </Popup>
-      </div>
+//         <Popup modal trigger={<button className="buttonMe"><h3>About Me</h3></button>}>
+//         {close => <Content close={close} />}
+//       </Popup>
+//       </div>
       
-        );
+//         );
 
-    }
+//     }
 
-    export default Modal;
+//     export default Modal;

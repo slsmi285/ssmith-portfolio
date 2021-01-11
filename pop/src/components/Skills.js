@@ -13,18 +13,18 @@ class Skills extends Component {
         return (
 
         
-            <Box>
+            <Box className="skillSet">
                 <Grid
                 container
                 direction="row"
                 justify="center"
-                alignItems="left">
+                alignItems="center">
 
                     <Typed className="titleskl"
                         strings={['SKILLS: ']}
                         typeSpeed={40}
                     />
-            
+           
 
                     <Typed className="skilblock"
                         strings={[
@@ -46,12 +46,13 @@ class Skills extends Component {
                             'Material-ui',
                             'Algorithms',
                             'Big O Notation']}
-                        typeSpeed={60}
-                        backSpeed={50}
+                        typeSpeed={40}
+                        backSpeed={60}
                         // attr="placeholder"
                         loop >
-                        <input style={{ backgroundColor:'transparent', borderColor: 'hidden', color: 'white', fontSize: '18px', hover: 'hidden' }} type="text" />
+                        <input  type="text" />
                     </Typed>
+                    
                 </Grid>
 
             </Box>

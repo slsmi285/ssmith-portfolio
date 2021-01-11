@@ -53,7 +53,9 @@ export default function ImageCard({ title, checked }) {
 
 
     <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})}>
+      <h1 style={{ color: 'limegreen', display: 'flex', justifyContent: 'center', textShadow: '-1px 1px #000' }}>Portfolio</h1>
       <div className={classes.cardpos}>
+        
         <Card className={classes.root}>
           <CardActionArea>
 

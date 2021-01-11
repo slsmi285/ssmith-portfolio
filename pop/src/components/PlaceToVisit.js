@@ -20,6 +20,12 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("md")]: {
             flexDirection: 'column',
     },
+    // projects: {
+    //     color: '#ffffff',
+    //     display: 'flex',
+
+
+    // },
    
 }
 
@@ -32,11 +38,11 @@ export default function PlaceToVisit() {
     return (
 
         <div className={classes.root} id="place-to-visit">
-
+            {/* <div >
+            <h1 classNam={classes.projects}>Portfolio</h1>
+            </div> */}
             <div className={classes.root}>
               
-
-
                         <ImageCard title={[]} checked={checked} />
                
             </div>

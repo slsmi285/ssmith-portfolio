@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-// import Link from '@material-ui/core/Link';
 import  { Paper, Card, TextField, Typography, Button, Box, Grid } from '@material-ui/core';
-// import Form from '@material-ui/core/form';
 import SendIcon from '@material-ui/icons/Send';
+// import { CardView } from 'react-card-with-image';
+import profile2 from './profile2.jpg';
 
 
 
@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
       borderBottom: '1px solid limegreen',
 
     },
+
     closefoot: {
       cursor: 'pointer',
       float: 'right',
@@ -69,53 +70,41 @@ const useStyles = makeStyles((theme) => ({
 export default ({ close }) => {
   const classes = useStyles();
   return (
-// {/* <div className={classes.modalfoot}> */}
-<Box component="div" elevation={8} square style={{ background: "#9c27b0", height: '50vh', width: '600px', border: "1px solid limegreen", padding: "50px"}}>
+
+<Box component="div" elevation={8} square style={{ background: "#9c27b0", height: '65vh', width: '800px', border: "1px solid limegreen", padding: "50px" }}>
 <div className={classes.modalfoot}>
-<a style={{ color: "limegreen", cursor: "pointer"}} className={classes.closefoot} onClick={close}>
+<a style={{ color: "limegreen", cursor: "pointer", border: '3px double limegreen', padding: '3px', elevation: '8' }} className={classes.closefoot} onClick={close} >
         &times; 
-    </a>
+    Close</a> 
     </div>
-<Grid container justify="center">
+<Grid  style={{ marginTop: '30px', marginLeft: '25px' }} container>
 <Box component="form" className={classes.form}>
-<Paper elevation={5} square>
+<div>
+          <img style={{ height: '40vh', float: 'left', marginRight: '20px', border: '4px double limegreen', hover: 'blue' }} src={profile2} alt="profile image" />
+         
+        
+<Paper elevation={8} square style={{ minHeight: '40vh', width: '300px', backgroundColor: '#cccccc', float: 'right', border: '4px double limegreen' }}>
 <div>
   <Card>
-    
-      {/* <a className={classes.closefoot} onClick={close}>
-        &times;
-    </a> */}
-    <Typography variant="h5" style={{color: "tomato", textAlign: "center", textTransform: "upperCase"}}>Contact Me</Typography>
-    <InputField fullWidth={true} label="Name" variant="outlined" inputProps={{ style: { color: "white" } }} margin="dense" size="medium" />
-    <br />
-    <InputField fullWidth={true} label="Email" variant="outlined" inputProps={{ style: { color: "white" } }} margin="dense" size="medium" />
-    <br />
-    <InputField fullWidth={true} label="Company" variant="outlined"inputProps={{ style: { color: "white" } }} margin="dense" size="medium" />
-    <br />
+  
+    <Typography variant="h5" style={{color: "limegreen", textAlign: "center", textTransform: "upperCase", backgroundColor: "#cccccc" }}>Contact Me</Typography>
+    <InputField fullWidth={true} label="Name" variant="outlined" inputProps={{ style: { color: "#cccccc" } }} margin="dense" size="large" />
+    <br /><br />
+    <InputField fullWidth={true} label="Email" variant="outlined" inputProps={{ style: { color: "#cccccc" } }} margin="dense" size="large" />
+    <br /><br />
+    <InputField fullWidth={true} label="Company" variant="outlined"inputProps={{ style: { color: "#cccccc" } }} margin="dense" size="large" />
+    <br /><br />
     
      <Button className={classes.btnSend} variant="outlined" fullWidth={true} endIcon={<SendIcon/>}>
        contact me
      </Button>
-     {/* <Link
-    component="button"
-    variant="body2"
-    onClick={() => {
-      
-    }}
-  >
-    Button
-  
-  </Link> */}
-    
-      
-      
-
-   
 
 </Card>
+</div>
+</Paper>
     </div>
     
-    </Paper>
+    
     </Box>
     </Grid>
     </Box>

@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
       <div className="Footer"> 
 
         <Popup modal trigger={<button className="buttonFoot">
-          <h1>Contact Me</h1>
+          <h3>Contact Me</h3>
           </button>}>
         {close => <Contact close={close} />}
       </Popup>
