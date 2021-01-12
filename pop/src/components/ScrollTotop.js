@@ -13,7 +13,7 @@ class Scrolltotop extends Component {
 
         return (
             <div className="move-top-wrap">                 
-                <div onClick={this.ScrollTo} class="move-top" ><MdHome /></div> 
+                <div onClick={this.ScrollTo} class="move-top" ><MdHome />Home</div> 
             </div>
         );
 

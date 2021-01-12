@@ -3,7 +3,7 @@ import "./style.css";
 import profile from './profile.jpg';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { blue, purple } from "@material-ui/core/colors";
+// import { blue, purple } from "@material-ui/core/colors";
 
 
 
@@ -15,64 +15,64 @@ const useStyles = makeStyles({
   //   height: '30rem',
   // },
   root: {
-    height: '80vh',
+    height: '100vh',
     marginTop: '5px',
     backgroundColor: '#862d7e',
   },
   border: '2px solid #7ed321',
   img: {
-    marginLeft: '10px',
+    marginLeft: '5px',
     width: '200px',
     height: '275px',
     float: 'left',
-    marginLeft: '20px',
-    paddingRight: '10px',
-    paddingTop: '3px',
+    marginRight: '10px',
+    padding: '3px',
+    border: '2px double #cccccc',
   },
   modal: {
-    marginBottom: '50px'
+    marginBottom: '20px',
+    borderTop: '2px double #A4DD00',
+    marginTop: '60px',
   },
   close: {
     cursor: 'pointer',
-    color: '#ffffff',
+    color: '#A4DD00',
     position: 'z-index',
+    marginTop: '5px',
     float: 'right',
     display: 'block',
-    padding: '2px 5px',
+    padding: '12px 5px',
     lineHeight: '15px',
     right: '10px',
     top: '150px',
-    fontSize: '12px',
-    borderRadius: '18px',
+    fontSize: '11px',
+    border: '2px double #A4DD00',
+    borderRadius: '8px',
     marginRight: '15px',
+    webkitTransition: 'all 0.5s',
+    mozTransition: 'all 0.5s',
+    oTransition: 'all 0.5s',
+    transition: 'all 0.5s',
+   
   
 
   },
-  // close: hover {
-  //   color: blue;
-  // },
+ 
   content: {
-    width: '98%',
+    width: '90%',
     alignContent: 'center',
-    paddingTop: '5px',
-    padding: '10px 5px',
+    // paddingTop: '5px',
+    // padding: '10px 5px',
     fontFamily: 'Raleway',
-    fontSize: '12px',
+    fontSize: '10px',
     // fontWeight: 'bold',
     float: 'right',
-    marginTop: '60px',
-    marginBottom: '10px',
+    marginTop: '20px',
+    marginLeft: '5px',
     marginRight: '5px',
     color: '#ffffff',
   },
-  // header: {
-  //   width: '100%',
-  //   borderBottom: '1px solid #697689',
-  //   fontSize: '20px',
-  //   fontWeight: 'bolder',
-  //   textAlign: 'center',
-  //   fontFamily: 'Raleway',
-  // },
+ 
 
 });
 
@@ -84,43 +84,49 @@ export default ({ close }) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div elevation={8} className={classes.modal}>
+      <div elevation={3} className={classes.modal}>
         <a className={classes.close} onClick={close}>
           &times;
           Close
     </a>
-        <div className={classes.header}>
-        </div>
+        {/* <div className={classes.header}>
+        </div> */}
         <div className={classes.content}>
           <div>
             <img className={classes.img} src={profile} alt="profile image" />
           </div>
           {" "}
-      I am Sandra Smith....East Tennessean/Hawaiian, Artist/Photographer, Gardener, and Full Stack Web Developer.
+      Aloha! I am Sandra Smith....East Tennessean/Hawaiian, Artist/Photographer, Gardener, and Full Stack Web Developer.  I am a recent graduate of Vanderbilt University Coding Bootcamp with a certificate in Full Stack Web Development.  
+      I have crossed paths with coding through the years, and I have always been interested in it.  My first introduction to a coding class was in my second year of college.
+        <br/> <br/>
+      Life sort of took over, and with my associates degree I went into different facets of payroll, hr, sales and sales management.  While working in these roles I realized the workplace challenges that I faced and where coding could improve both my experience and my 
+      customer's experience (internally and externally). 
       <br /><br />
+      Computer programming always intrigued me, but before I realized that this is where I wanted to be, I decided to finish my college degree.   I graduated from Western Govenor's University with a Bachelor's Degree of Science in Business Management.   And if that was not enough, I had intended
+      to go back for another Bachelor's in Accounting, but in my research of colleges, I came upon Vanderbilt's online coding class.  I was absolutely excited, as it had been out of my reach logistically. Closest class was in San Francisco, when I researched five years ago.  Timing could not have been more perfect, 
+      I was not going to miss this opportunity to do what I have always wanted to do.  
+      
+    
+      <br /><br />
+      As I mentioned, in my past roles, I always had the thought of "there should be an app created for this problem".  Coding can make a process better, as quoted by Reshma Saujani "Coding is extremely creative and is an integral part of almost every industry." This is a Boolean statement, for sure!
+      <br /><br />
+      Let me share, briefly, some opportuntities where I know having a better program would have been golden:<br />
+      <ul>
+        <li>In many past roles, I often found that not all departments are connected or streamlined.  Creating an app to remove the manual computing would have improved efficiency. </li>
+        <li>In retail management, shrinkage was not automated at the time that I did it, and someone solved that problem with barcode readers! </li>
+        <li>In B2B, again, departments were all segregated, creating an app to reduce duplication and improve efficiency on reporting would have improved various areas of reporting.</li>
 
-      Coding has always been an interest for me. I was exposed to it in college, then through the course of life, I experienced areas where I realized that changes to a program could make a process better.
-      <br /><br />
+      </ul>
 
-      As a Retail Store Manager, a couple of areas of improvement or creation in automating would have improved employee effeciency.  Automating the employee scheduling would have made a huge difference in time spent creating the weekly store schedule.
-      Another area of efficiency at the time, was inventory control for shrinkage. In most cases, inventory received would be automatically added to the store's inventory by entering the shipping barcode information, however, when it came to inventory for shrinkage was
-      done manually. As a Store Manager, I had often discussed with my HQ team about how wonderful automating this process for accuracy, and improving bottom-line would be for all.
-      <br /><br />
-      In another role, working with a Telecomm giant, first as a Consultant, then as a B2B Sales Representative, I came upon so many areas of opportunity where I thought improving or creating the programming could make life better, and again, this would add improvement to the company's processes and bottom-line revenue.
-       There were applications that were not entirely connected, not all dashboards could be seen at once. Being able to track processes and clients through a dashboard for both front end sales and back-end processes would have made it easier.
-      Tracking one hundred accounts manually is very challenging, and staying on your "A" game was a must, but I often thought if it were all automated, I could increase my workflow and efficiency.
-      <br /><br />
-      As you can tell, coding was a forethought of my mine in every instance and for each role that I worked in.  Until recently, the opportunity to embark on this path was just not logistically available.
-      However, when the "perfect storm" presented itself through a Coding Bootcamp with Vanderbilt University -- yes!  right in my backyard (practically), but online, I could not wait to jump on the chance to finally do what I wanted to do.
+      <br />
 
+      I am thrilled to be on this new journey!  I am seeing the world through coding, areas of opportunities exist out in the world, to make life easier!
       <br /><br />
-
-      I have a passion for coding, but when I am not coding, I can be found doing one of the following: Cooking and researching new recipes, painting in oil or acrylic, photographing, and gardening.
-      <br /><br />
-      Photographing involves a lot of mathematics, and I love the challenge of getting the image right the first time.  I have won a ton of awards internationally and locally for my wedding photography.
-      While I enjoyed photographing weddings, I now love to photograph landscape and pets.  My greatest subjects are my two newest rescues, two boxers, Bailey and Buster.
-      <br /><br />
-      Finally, my latest weekend passion is gardening, all year round.  I am taking on a a huge project to design and landscape my backyard to create an English style garden with various themes.
+      One of my past roles was a business owner, an Award Winning Wedding Photographer. I enjoyed it immensely for the challenges on job, you see its all mathematics and its all in the details.  Mathematics for lighting and shade, as well as getting the details and images done the first time on the front end.
+      These days, its a weekend hobby for me, and where I keep up my skills, photographing my muses, my dogs.  Other passions when I am not coding involve the following: Cooking, gardening, and painting.  All of these require continuous practice, which set my foundation for coding, as it requires continous
+      practice.  And I know the more I code, the better it gets!  Totally rewarding.
+            <br /><br />
+      Lastly, I mentioned gardening, I am a self taught gardener.  It is a lot harder than one thinks, its science, but I am not intimidated, as this is my new weekend passion.  Designing for 2021 and into 2022 various English Garden themes in my backyard.
 
       <br />
 
@@ -130,4 +136,3 @@ export default ({ close }) => {
   );
 };
 
-// export default Content;

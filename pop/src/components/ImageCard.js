@@ -15,9 +15,9 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 250,
+    maxWidth: 200,
     background: 'rgba(0,0,0,0.3)',
-    margin: '10px',
+    margin: '5px',
     color: '#fff',
     // display: 'flexbox',
     // alignItems: 'flext-start',
@@ -32,7 +32,7 @@ const useStyles = makeStyles({
 
   content: {
     color: '#fff',
-    fontSize: '10px',
+    fontSize: '9px',
     height: '150px',
   },
   btnfoot: {
@@ -119,9 +119,105 @@ export default function ImageCard({ title, checked }) {
           </CardActions>
           </div>
         </Card>
+      
+
+      <Card className={classes.root}>
+          <CardActionArea>
+            <CardMedia className={classes.media}
+              component="img"
+              alt="Dahlia Pink"
+              height="140"
+              image={process.env.PUBLIC_URL + '/assets/dahlia2.jpg'}
+              title="Project One"
+            />
+            <CardContent className={classes.content}>
+              <Typography gutterBottom variant="h5" component="h2">
+                Cosmic Cocktails
+          </Typography>
+              <Typography className={classes.content} variant="body2" color="textSecondary" component="p">
+                With MongoDB, Passport and NodeJs, this app will be sure to get your interest in a cocktail recipe!
+                Users can search for recipes by the cocktail name or by a letter.
+          </Typography>
+            </CardContent>
+          </CardActionArea>
+          <div className={classes.btnfoot}>
+          <CardActions>
+            <Button size="small" color="primary" href="https://slsmi285.github.io/Project2_CosmicCocktails/">
+              Demo
+        </Button>
+            <Button size="small" color="primary" href="https://github.com/slsmi285/Project2_CosmicCocktails">
+              Code
+        </Button>
+          </CardActions>
+          </div>
+        </Card>
+        <Card className={classes.root}>
+          <CardActionArea>
+            <CardMedia className={classes.media}
+              component="img"
+              alt="Dahlia Pink"
+              height="140"
+              image={process.env.PUBLIC_URL + '/assets/dahlia2.jpg'}
+              title="Project One"
+            />
+            <CardContent className={classes.content}>
+              <Typography gutterBottom variant="h5" component="h2">
+                Cosmic Cocktails
+          </Typography>
+              <Typography className={classes.content} variant="body2" color="textSecondary" component="p">
+                With MongoDB, Passport and NodeJs, this app will be sure to get your interest in a cocktail recipe!
+                Users can search for recipes by the cocktail name or by a letter.
+          </Typography>
+            </CardContent>
+          </CardActionArea>
+          <div className={classes.btnfoot}>
+          <CardActions>
+            <Button size="small" color="primary" href="https://slsmi285.github.io/Project2_CosmicCocktails/">
+              Demo
+        </Button>
+            <Button size="small" color="primary" href="https://github.com/slsmi285/Project2_CosmicCocktails">
+              Code
+        </Button>
+          </CardActions>
+          </div>
+        </Card>
+
+
+        <Card className={classes.root}>
+          <CardActionArea>
+            <CardMedia className={classes.media}
+              component="img"
+              alt="Dahlia Pink"
+              height="140"
+              image={process.env.PUBLIC_URL + '/assets/dahlia2.jpg'}
+              title="Project One"
+            />
+            <CardContent className={classes.content}>
+              <Typography gutterBottom variant="h5" component="h2">
+                Cosmic Cocktails
+          </Typography>
+              <Typography className={classes.content} variant="body2" color="textSecondary" component="p">
+                With MongoDB, Passport and NodeJs, this app will be sure to get your interest in a cocktail recipe!
+                Users can search for recipes by the cocktail name or by a letter.
+          </Typography>
+            </CardContent>
+          </CardActionArea>
+          <div className={classes.btnfoot}>
+          <CardActions>
+            <Button size="small" color="primary" href="https://slsmi285.github.io/Project2_CosmicCocktails/">
+              Demo
+        </Button>
+            <Button size="small" color="primary" href="https://github.com/slsmi285/Project2_CosmicCocktails">
+              Code
+        </Button>
+          </CardActions>
+          </div>
+        </Card>
+
+
+
       </div>
-
-
+      
     </Collapse>
 
   )

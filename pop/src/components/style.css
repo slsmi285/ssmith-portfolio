@@ -2,7 +2,7 @@
   text-align: center;
   margin-top: 5px;
   /* border-bottom: 1px solid gray; */
-  width: 100%;
+  width: auto;
   padding: 5px;
 }
 
@@ -18,16 +18,16 @@
   /* border-radius: 5px; */
   /* border: 4px double limegreen; */
   text-align: center;
-  font-size: 8px;
+  font-size: 10px;
   /* padding: 5px; */
-  width: 100px;
+  width: auto;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
   /* margin: 5px; */
-  float: right;
+  float: center;
 }
 
   .modal > .actions {
@@ -42,7 +42,7 @@
 
   .Footer {
     text-align: center;
-    margin-bottom: -350px;
+    margin-bottom: -200px;
     border-bottom: 1px solid gray;
      width: 100%;
     padding: 5px;
@@ -103,6 +103,9 @@
   span.typed-cursor {
    
     visibility: hidden;
+  }
+  .move-top: {
+    font-size: 6px;
   }
   
  
