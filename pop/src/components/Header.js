@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+// import { withRouter } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, IconButton, Toolbar, Collapse, Link } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -9,6 +11,10 @@ import Skills from './Skills';
 import Popup from 'reactjs-popup';
 import "./style.css";
 import Content from "./Content.js";
+import PlaceToVisit from './PlaceToVisit';
+import ModalContact from './ModalContact';
+import Contact from './Contact';
+import Resume from './Resume';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -76,80 +82,90 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '100px',
         // marginBottom: '20px',
     },
+    navLinks: {
+        cursor: 'pointer',
+    },
+
 }));
-export default function Header() {
-    {
-        const classes = useStyles();
-        const [checked, setChecked] = useState(false);
-        useEffect(() => {
-            setChecked(true);
-        }, []);
-        const preventDefault = (event) => event.preventDefault();
-        // render()
-        return (
-            <div className={classes.root} id="header">
-                <div className="App">
-                    <AppBar className={classes.appbar} elevation={0}>
+const Header = props => {
+    const { history } = props;
+    const classes = useStyles();
+    const [checked, setChecked] = useState(false);
+    useEffect(() => {
+        setChecked(true);
+    }, []);
+    // const preventDefault = (event) => event.preventDefault();
+    // render()
+    const handleOnLink = pageURL => {
+        history.pushState(pageURL);
+    };
 
-                        <Toolbar className={classes.appbarWrapper}>
+    return (
+        <div className={classes.root} id="header">
+            <div className="App">
+                <AppBar className={classes.appbar} elevation={0}>
 
-                            <h1 className={classes.appbarTitle}>Sandra Smith<span className={classes.colorText}>My Portfolio</span></h1>
+                    <Toolbar className={classes.appbarWrapper}>
 
-                            <Typography className={classes.rootTwo}>
-                                <Popup modal
-                                    trigger={<button className="buttonMe">
-                                        <h3>About Me</h3></button>}>
-                                    {close => <Content close={close} />}
-                                </Popup>
-                                <Link href="#" onClick={preventDefault}>
-                                    Projects 
+                        <h1 className={classes.appbarTitle}>Sandra Smith<span className={classes.colorText}>My Portfolio</span></h1>
+
+                        <Typography className={classes.rootTwo}>
+                            <Popup modal
+                                trigger={<button className="buttonMe">
+                                    <h3>About Me</h3></button>}>
+                                {close => <Content close={close} />}
+                            </Popup>
+                            <Popup modal trigger={<button className="buttonMe">
+                                <h3>Contact Me</h3>
+                            </button>}>
+                                {close => <Contact close={close} />}
+                            </Popup>
+                            {/* <Link to="/PlacesToVisit" className={classes.navLinks} >
+                                Projects
+                                </Link> */}
+
+                            <Link to="/Resume" className={classes.navLinks} onClick={() => handleOnLink('Resume')}>
+                                Resume
                                 </Link>
 
-                                <Link href="#" onClick={preventDefault} >
-                                    Resume 
-                                </Link>
-                                <Link href="#" onClick={preventDefault} >
-                                    Contact Me 
-                                </Link>
 
 
-                                
+                            <IconButton>
 
+                                <ScrollTotop />
 
-                                <IconButton>
+                            </IconButton>
+                        </Typography>
+                    </Toolbar>
 
-                                    <ScrollTotop />
-
-                                </IconButton>
-                            </Typography>
-                        </Toolbar>
-
-                    </AppBar>
-                </div>
-                {/* <Box> */}
-                <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapseHeight={50}>
-                    <div className={classes.container}>
-                        <h1 className={classes.title}>
-                            Sandra Smith <br />
+                </AppBar>
+            </div>
+            {/* <Box> */}
+            <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapseHeight={50}>
+                <div className={classes.container}>
+                    <h1 className={classes.title}>
+                        Sandra Smith <br />
             Web<span className={classes.colorText}>Developer</span>
 
-                            <div className={classes.skillBlock}>
-                                <Skills />
-                            </div>
+                        <div className={classes.skillBlock}>
+                            <Skills />
+                        </div>
 
 
-                        </h1>
-                        {/* <br /> */}
-                        <Scroll to="place-to-visit" smooth={true}>
-                            <IconButton>
-                                <ExpandMoreIcon className={classes.goDown} />
-                            </IconButton>
-                        </Scroll>
+                    </h1>
+                    {/* <br /> */}
+                    <Scroll to="place-to-visit" smooth={true}>
+                        <IconButton>
+                            <ExpandMoreIcon className={classes.goDown} />
+                        </IconButton>
+                    </Scroll>
 
-                    </div>
-                </Collapse>
-                {/* </Box> */}
-            </div>
-        )
-    };
-}
+                </div>
+            </Collapse>
+            {/* </Box> */}
+        </div>
+    )
+};
+
+
+export default Header;

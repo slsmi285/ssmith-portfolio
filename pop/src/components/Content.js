@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import profile from './profile.jpg';
+import profile from '../assets/profile.jpg';
 import { makeStyles } from '@material-ui/core/styles';
 
 // import { blue, purple } from "@material-ui/core/colors";

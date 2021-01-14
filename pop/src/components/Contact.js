@@ -4,7 +4,7 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import  { Paper, Card, TextField, Typography, Button, Box, Grid } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 // import { CardView } from 'react-card-with-image';
-import profile2 from './profile2.jpg';
+import profile2 from '../assets/profile2.jpg';
 
 
 
@@ -14,13 +14,16 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: theme.spacing(3),
       background: 'purple',
       minheight: '10vh',
+      width: '100%',
     },
-    form: {
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
-      position: 'absolute',
-    },
+  },
+    // form: {
+    //   top: '40%',
+    //   left: '40',
+    //   transform: 'translate(-50%, -50%)',
+    //   position: 'absolute',
+    //   float: 'right',
+    // },
     btnSend: {
       marginTop: '1rem',
       color: 'tomato',
@@ -28,22 +31,42 @@ const useStyles = makeStyles((theme) => ({
     },
     modalfoot: {
       borderBottom: '1px solid limegreen',
-
+      width: '100%',
+     
+      
+    },
+    contactImg: {
+      height: '40vh',
+      float: 'left',
+      border: '4px double #A4DD00', 
+      // marginRight: '20px',
     },
 
-    closefoot: {
+  closefoot: {
       cursor: 'pointer',
       float: 'right',
+      color: '#A4DD00',
       padding: '2px 5px',
       lineHeight: '15px',
       marginTop: '1px',
       top: '630px',
-      fontSize: '24px',
-      background: 'purple',
-      borderRadius: '18px',
-      border: '1px solid #cfcece',
+      fontSize: '11px',
+      border: '2px double #A4DD00',
+      borderRadius: '8px',
+      marginRight: '15px',
+      webkitTransition: 'all 0.5s',
+      mozTransition: 'all 0.5s',
+      oTransition: 'all 0.5s',
+      transition: 'all 0.5s',
     },
-  },
+    cntForm: {
+      minHeight: '40vh',
+      width: '200px',
+      backgroundColor: '#cccccc',
+      float: 'right',
+      border: '4px double #A4DD00', 
+      marginLeft: '5px',
+    },
 }));
   const InputField = withStyles({
     root: {
@@ -71,23 +94,23 @@ export default ({ close }) => {
   const classes = useStyles();
   return (
 
-<Box component="div" elevation={8} square style={{ background: "#9c27b0", height: '65vh', width: '800px', border: "1px solid limegreen", padding: "50px" }}>
+<Box component="div" elevation={8} square style={{ background: "#9c27b0", height: '65vh', width: '800px', border: "1px solid limegreen", padding: "50px", width: '100%' }}>
 <div className={classes.modalfoot}>
-<a style={{ color: "limegreen", cursor: "pointer", border: '3px double limegreen', padding: '3px', elevation: '8' }} className={classes.closefoot} onClick={close} >
+<a className={classes.closefoot} onClick={close} >
         &times; 
     Close</a> 
     </div>
 <Grid  style={{ marginTop: '30px', marginLeft: '25px' }} container>
 <Box component="form" className={classes.form}>
 <div>
-          <img style={{ height: '40vh', float: 'left', marginRight: '20px', border: '4px double limegreen', hover: 'blue' }} src={profile2} alt="profile image" />
+          <img className={classes.contactImg} src={profile2} alt="profile image" />
          
         
-<Paper elevation={8} square style={{ minHeight: '40vh', width: '300px', backgroundColor: '#cccccc', float: 'right', border: '4px double limegreen' }}>
+<Paper className={classes.cntForm} elevation={8} square >
 <div>
   <Card>
   
-    <Typography variant="h5" style={{color: "limegreen", textAlign: "center", textTransform: "upperCase", backgroundColor: "#cccccc" }}>Contact Me</Typography>
+    <Typography variant="h5" >Contact Me</Typography>
     <InputField fullWidth={true} label="Name" variant="outlined" inputProps={{ style: { color: "#cccccc" } }} margin="dense" size="large" />
     <br /><br />
     <InputField fullWidth={true} label="Email" variant="outlined" inputProps={{ style: { color: "#cccccc" } }} margin="dense" size="large" />
