@@ -11,7 +11,7 @@ import './style.css';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        minHeight: '90vh',
+        minHeight: '80vh',
         flexGrow: 1,
         display: 'flex',
         alignItems: 'flex-start',

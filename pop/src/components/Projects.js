@@ -4,16 +4,20 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-// import { Collapse } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
+import Button from '@material-ui/core/Button'
+
 import Typography from '@material-ui/core/Typography';
-// import { IconButton } from '@material-ui/core';
-import { Grid, Paper } from '@material-ui/core';
+// import { Grid, Paper } from '@material-ui/core';
+import { Card, CardBody, CardFooter } from '@material-ui/core';
 
+// import withStyles from "@material-ui/core/styles/withStyles"
 
-
-
+const styles = {
+fullHeightCard: {
+    height: '100%',
+    backgroundColor: 'purple',
+    },
+}
 
 // const useStyles = makeStyles({
 //     root: {
@@ -45,22 +49,18 @@ import { Grid, Paper } from '@material-ui/core';
 // });
 
 const Projects = props => {
-    // const classes = useStyles();
-    const { title, description, imageSrc, demoSrc, gitSrc } = props;
+    const {classes} = props
+    const { title, description, imageUrl, demoSrc, gitSrc } = props;
 
     return (
         <>
-            <Grid container xs={12} sm={4}
-                spacing={3}
-                direction="row"
-                justify="space-evenly"
-                alignItems="flex-start">
-                <Card style={{ margin: "20px" }}> 
+             
+                <Card > 
 
                     <CardActionArea>
 
 
-                        <CardMedia style={{ height: "140px" }} image={imageSrc} />
+                        <CardMedia style={{ height: "150px" }} image={imageUrl} />
                         <CardContent >
                             <Typography gutterBottom variant="h5" component="h2">
                                 {title}
@@ -79,8 +79,7 @@ const Projects = props => {
                     </div>
 
                 </Card>
-            </Grid>
-
+           
         </>
     );
 }

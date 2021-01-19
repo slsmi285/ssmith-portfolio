@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-// import { withRouter } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, IconButton, Toolbar, Collapse, Link } from '@material-ui/core';
+import { AppBar, IconButton, Toolbar, Collapse } from '@material-ui/core';
+import Button from "@material-ui/core/Button"
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
 import { Link as Scroll } from 'react-scroll';
@@ -11,10 +10,8 @@ import Skills from './Skills';
 import Popup from 'reactjs-popup';
 import "./style.css";
 import Content from "./Content.js";
-import PlaceToVisit from './PlaceToVisit';
-import ModalContact from './ModalContact';
 import Contact from './Contact';
-import Resume from './Resume';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -38,6 +35,28 @@ const useStyles = makeStyles((theme) => ({
             minHeight: '1rem',
             fontFamily: 'Raleway',
             fontSize: '12px',
+        },
+    },
+    btnHeader: {
+        backgroundColor: 'transparent',
+        color: 'limegreen',
+        textShadow: '-1px 1px black',
+        fontFamily: 'Raleway',
+        minHeight: '1rem',
+        border: 'none',
+        textAlign: 'center',
+        fontSize: '10px',
+        width: 'auto',
+        webkitTransition: 'all 0.5s',
+        mozTransition: 'all 0.5s',
+        oTransition: 'all 0.5s',
+        transition: 'all 0.5s',
+        cursor: 'pointer',
+        float: 'center',
+    },
+    a: {
+        webkit: {
+            textDocoration: "none",
         },
     },
     appbar: {
@@ -94,8 +113,7 @@ const Header = props => {
     useEffect(() => {
         setChecked(true);
     }, []);
-    // const preventDefault = (event) => event.preventDefault();
-    // render()
+
     const handleOnLink = pageURL => {
         history.pushState(pageURL);
     };
@@ -111,24 +129,18 @@ const Header = props => {
 
                         <Typography className={classes.rootTwo}>
                             <Popup modal
-                                trigger={<button className="buttonMe">
+                                trigger={<button className={classes.btnHeader}>
                                     <h3>About Me</h3></button>}>
                                 {close => <Content close={close} />}
                             </Popup>
-                            <Popup modal trigger={<button className="buttonMe">
+                            <Popup modal trigger={<button className={classes.btnHeader}>
                                 <h3>Contact Me</h3>
                             </button>}>
                                 {close => <Contact close={close} />}
                             </Popup>
-                            {/* <Link to="/PlacesToVisit" className={classes.navLinks} >
-                                Projects
-                                </Link> */}
-
-                            <Link to="/Resume" className={classes.navLinks} onClick={() => handleOnLink('Resume')}>
-                                Resume
-                                </Link>
-
-
+                            {<Button className={classes.btnHeader}>
+                                <a style={{ textDecoration: "none", color: "limegreen", textShadow: "-1px 1px black" }} href="/resume.pdf" target="_blank" ><h3>RESUME</h3></a>
+                            </Button>}
 
                             <IconButton>
 
@@ -140,12 +152,12 @@ const Header = props => {
 
                 </AppBar>
             </div>
-            {/* <Box> */}
+
             <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapseHeight={50}>
                 <div className={classes.container}>
                     <h1 className={classes.title}>
                         Sandra Smith <br />
-            Web<span className={classes.colorText}>Developer</span>
+                        Web<span className={classes.colorText}>Developer</span>
 
                         <div className={classes.skillBlock}>
                             <Skills />
@@ -153,7 +165,7 @@ const Header = props => {
 
 
                     </h1>
-                    {/* <br /> */}
+
                     <Scroll to="place-to-visit" smooth={true}>
                         <IconButton>
                             <ExpandMoreIcon className={classes.goDown} />
@@ -162,7 +174,7 @@ const Header = props => {
 
                 </div>
             </Collapse>
-            {/* </Box> */}
+
         </div>
     )
 };

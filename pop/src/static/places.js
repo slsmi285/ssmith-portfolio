@@ -7,7 +7,7 @@ const places = [
         title: 'C-19 Tracker',
         description:
         " Using React and MongoDB, the user can check on Covid-19 Status and protocols to the state he/she is traveling to.",
-        imageSrc: process.env.PUBLIC_URL + '/assets/dahlia1.jpg',
+        imageUrl: '/covid19.jpg',
         demoSrc: 'www.slsmi285.github.io/c19-tracker',
         gitSrc: 'www.github.com/slsmi285/c19-tracker',
         
@@ -17,9 +17,9 @@ const places = [
         title: 'Cosmic Cocktails',
         description:
         "Search a cocktail recipe by its name, or search for something new by entering a letter or ingredient.",
-        imageSrc: process.env.PUBLIC_URL + '/assets/dahlia1.jpg',
-        demoSrc: 'www.slsmi285.github.io/c19-tracker',
-        gitSrc: 'www.github.com/slsmi285/c19-tracker',
+        imageUrl: '/drinkcover.jpg',
+        demoSrc: 'https://cryptic-tundra-79116.herokuapp.com/',
+        gitSrc: 'https://github.com/slsmi285/Project2_CosmicCocktails',
         
          
     },
@@ -27,40 +27,40 @@ const places = [
         title: 'React Tic Tac Toe',
         description:
         "Dhalhia's come in all shapes and sizes.",
-        imageSrc: process.env.PUBLIC_URL + '/assets/dahlia1.jpg',
-        demoSrc: 'www.slsmi285.github.io/c19-tracker',
-        gitSrc: 'www.github.com/slsmi285/c19-tracker',
+        imageUrl: '/web.jpg',
+        demoSrc: '',
+        gitSrc: '',
         
          
     },
     {
-        title: 'Train Scheduler',
+        title: 'Train Station Scheduler',
         description:
         "Enter the state you are traveling to to find out covid-19 status and state info.",
-        imageSrc: process.env.PUBLIC_URL + '/assets/dahlia1.jpg',
+        imageUrl: '/train.jpg',
         demoSrc: 'www.slsmi285.github.io/c19-tracker',
-        gitSrc: 'www.github.com/slsmi285/c19-tracker',
+        gitSrc: 'https://github.com/slsmi285/Train-Station-Scheduler',
         
         
         
     },
     {
-        title: 'React Clicky Game',
+        title: 'Scraper News',
         description:
         "Search a cocktail recipe by its name, or search for something new by entering a letter or ingredient.",
-        imageSrc: process.env.PUBLIC_URL + '/assets/dahlia1.jpg',
-        demoSrc: 'www.slsmi285.github.io/c19-tracker',
-        gitSrc: 'www.github.com/slsmi285/c19-tracker',
+        imageUrl: '/web.jpg',
+        demoSrc: 'https://vast-spire-84282.herokuapp.com/',
+        gitSrc: 'https://github.com/slsmi285/scraper_news',
         
          
     },
     {
-        title: '',
+        title: 'Liri Node',
         description:
         "Dhalhia's come in all shapes and sizes.",
-        imageSrc: process.env.PUBLIC_URL + '/assets/dahlia1.jpg',
-        demoSrc: 'www.slsmi285.github.io/c19-tracker',
-        gitSrc: 'www.github.com/slsmi285/c19-tracker',
+        imageUrl: '/liri.jpg',
+        demoSrc: 'https://slsmi285.github.io/liri-node-app/',
+        gitSrc: 'https://github.com/slsmi285/liri-node-app',
         
         
     },

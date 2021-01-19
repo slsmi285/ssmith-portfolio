@@ -1,19 +1,11 @@
 import React from "react";
-import "./style.css";
 import profile from '../assets/profile.jpg';
 import { makeStyles } from '@material-ui/core/styles';
-
-// import { blue, purple } from "@material-ui/core/colors";
-
-
+import "./style.css";
 
 
 const useStyles = makeStyles({
-  // menuSlideContainer: {
-  //   width: 250,
-  //   background: '#511',
-  //   height: '30rem',
-  // },
+
   root: {
     height: '100vh',
     marginTop: '5px',
