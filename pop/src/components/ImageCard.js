@@ -16,7 +16,7 @@ const ImageCard = ({ title, checked }) => {
   const getPlacesList = placesObj => {
 
     return (
-      <Grid item xs={4}> <Projects {...placesObj} styles={{ minHeight: "30vh"}}/> </Grid>
+      <Grid item xs={4}> <Projects {...placesObj} styles={{ minHeight: "40vh" }}/> </Grid>
     );
   };
 
@@ -29,11 +29,14 @@ const ImageCard = ({ title, checked }) => {
         <Container>
           <Grid
             container
-            spacing={5}
-            direction="row"
-            alignContent="flex-start"
-            justify="space-evenly"
-          // style={{ minHeight: '160vh' }}
+            spacing={3}
+         
+            flexWrap= 'wrap'
+            justifyContent= 'space-around'
+            overflow= 'hidden'
+          //   alignContent="flex-start"
+          //   justify="space-evenly"
+          // style={{ minHeight: '100vh' }}
           >
 
 

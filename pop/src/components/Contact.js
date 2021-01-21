@@ -4,7 +4,7 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { Paper, Card, TextField, Typography, Button, Box, Grid } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 // import { CardView } from 'react-card-with-image';
-import profile2 from '../assets/profile2.jpg';
+import profile2 from '../static/profile2.jpg';
 
 
 

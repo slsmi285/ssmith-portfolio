@@ -60,7 +60,7 @@ const Projects = props => {
                     <CardActionArea>
 
 
-                        <CardMedia style={{ height: "150px" }} image={imageUrl} />
+                        <CardMedia image={imageUrl }style={{ height: "140px" }}  />
                         <CardContent >
                             <Typography gutterBottom variant="h5" component="h2">
                                 {title}
