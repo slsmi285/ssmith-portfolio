@@ -29,9 +29,6 @@ function App() {
       <CssBaseline />
       <Header />
 
-
-
-      {/* <Modal /> */}
       <PlaceToVisit />
       <ModalContact />
       
