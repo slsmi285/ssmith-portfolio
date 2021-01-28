@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { Paper, Card, TextField, Typography, Button, Box, Grid } from '@material-ui/core';
-import SendIcon from '@material-ui/core/Icon';
+// import SendIcon from '@material-ui/core/Icon';
 
 
 import profile2 from '../static/profile2.jpg';
