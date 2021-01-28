@@ -2,8 +2,9 @@ import React from "react";
 import "./style.css";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { Paper, Card, TextField, Typography, Button, Box, Grid } from '@material-ui/core';
-import SendIcon from '@material-ui/icons/Send';
-// import { CardView } from 'react-card-with-image';
+import SendIcon from '@material-ui/core/Icon';
+
+
 import profile2 from '../static/profile2.jpg';
 
 
@@ -20,22 +21,30 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '1rem',
     color: 'tomato',
     borderColor: 'tomato',
+    alignContent: 'center',
+    bacgroundColor: 'transparent',
   },
   conBox: {
-    backgroundColor: 'purple',
-    minHeight: '50vh',
+    backgroundColor: 'darkviolet',
+    minHeight: '100vh',
     AlignContent: 'center',
-    width: '80%',
+    width: '100%',
     border: '3px double #A4DD00',
     borderRadius: '8px',
-    marginRight: '15px',
+    // marginRight: '15px',
     webkitTransition: 'all 0.5s',
     mozTransition: 'all 0.5s',
     oTransition: 'all 0.5s',
     transition: 'all 0.5s',
   },
+  contactBox: {
+    marginTop: '175px',
+    width: '1230px',
+    
+
+  },
   contactImg: {
-    marginTop: '20px',
+    // marginTop: '50px',
     marginRight: '50px',
     marginLeft: '150px',
     width: '30%',
@@ -52,7 +61,8 @@ const useStyles = makeStyles((theme) => ({
   cntForm: {
     // justify: 'flex',
     width: '30%',
-    marginTop: '25px',
+    // marginTop: '55px',
+    // height: '48vh',
     border: '3px solid #A4DD00',
     borderRadius: '8px',
     marginRight: '15px',
@@ -67,8 +77,8 @@ const useStyles = makeStyles((theme) => ({
     color: '#A4DD00',
     padding: '2px 5px',
     lineHeight: '20px',
-    marginTop: '15px',
-    top: '550px',
+    marginTop: '475px',
+    // top: '550px',
     fontSize: '11px',
     border: '2px double #A4DD00',
     borderRadius: '8px',
@@ -109,6 +119,7 @@ export default ({ close }) => {
   return (
 
     <Grid xs={12} className={classes.root} container>
+      
 
       <Box elevation={2} square className={classes.conBox}>
         <div>
@@ -118,7 +129,8 @@ export default ({ close }) => {
         </a>
         </div>
 
-
+<div className={classes.contactBox}>
+  
         <div>
           <img className={classes.contactImg} src={profile2} alt="profile image" />
         </div>
@@ -126,7 +138,7 @@ export default ({ close }) => {
 
         <div>
           <Card component="form" className={classes.cntForm}>
-
+<h3 style={{ color: "limegreen", display: "center"}} variant="outlined" size="large" fullWidth="true">CONTACT ME</h3>
             {/* <Typography variant="h5" style={{ fontSize: "15px", textAlign: "center" }} >Contact Me</Typography> */}
             <InputField fullWidth={true} label="Name" variant="outlined" inputProps={{ style: { color: "#cccccc" } }} margin="dense" size="small" />
 
@@ -135,11 +147,25 @@ export default ({ close }) => {
             <InputField fullWidth={true} label="Company" variant="outlined" inputProps={{ style: { color: "#cccccc" } }} margin="dense" size="small" />
 
 
-            <Button className={classes.btnSend} variant="outlined" fullWidth={true} endIcon={<SendIcon />}>
-              contact me
-                  </Button>
+            <Button className={classes.btnSend} style={{ backgroundColor: 'transparent', display: 'center'}}
+              variant="outlined"
+              size="small"
+              fullWidth="true"
+              target="_top"
+              rel="noopener noreferrer"
+              href={`mailto:sls2code@gmail.com`}
+            >
+              <Typography variant="button" style={{ fontSize: '1rem', backgroundColor: 'transparent' }} >
+                  SEND EMAIL
+              </Typography>
+              
+            </Button>
+
+          
+
 
           </Card>
+        </div>
         </div>
 
 

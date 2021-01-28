@@ -3,16 +3,16 @@
 
 
 const places = [
-    {
-        title: 'C-19 Tracker',
-        description:
-        "Using React and MongoDB, the user can check on Covid-19 Status and protocols of any State.",
-        imageUrl: '/assets/covid19.png',
-        demoSrc: 'www.slsmi285.github.io/c19-tracker',
-        gitSrc: 'www.github.com/slsmi285/c19-tracker',
+    // {
+    //     title: 'C-19 Tracker',
+    //     description:
+    //     "Using React and MongoDB, the user can check on Covid-19 Status and protocols of any State.",
+    //     imageUrl: '/assets/covid19.png',
+    //     demoSrc: 'www.slsmi285.github.io/c19-tracker',
+    //     gitSrc: 'www.github.com/slsmi285/c19-tracker',
         
         
-    },
+    // },
     {
         title: 'Cosmic Cocktails',
         description:
@@ -23,16 +23,16 @@ const places = [
         
          
     },
-    {
-        title: 'React Tic Tac Toe',
-        description:
-        "Using React and Material-UI. Play the game! Tic Tac Toe....",
-        imageUrl: '/assets/web.jpg',
-        demoSrc: '',
-        gitSrc: '',
+    // {
+    //     title: 'React Tic Tac Toe',
+    //     description:
+    //     "Using React and Material-UI. Play the game! Tic Tac Toe....",
+    //     imageUrl: '/assets/web.jpg',
+    //     demoSrc: '',
+    //     gitSrc: '',
         
          
-    },
+    // },
     {
         title: 'Train Station Scheduler',
         description:
@@ -54,16 +54,16 @@ const places = [
         
          
     },
-    {
-        title: 'Liri Node',
-        description:
-        "Using Nodejs CLI, all your answers will show up in the terminal.",
-        imageUrl: '/assets/liri.jpg',
-        demoSrc: 'https://slsmi285.github.io/liri-node-app/',
-        gitSrc: 'https://github.com/slsmi285/liri-node-app',
+    // {
+    //     title: 'Liri Node',
+    //     description:
+    //     "Using Nodejs CLI, all your answers will show up in the terminal.",
+    //     imageUrl: '/assets/liri.jpg',
+    //     demoSrc: 'https://slsmi285.github.io/liri-node-app/',
+    //     gitSrc: 'https://github.com/slsmi285/liri-node-app',
         
         
-    },
+    // },
 
 ];
 export default places;
