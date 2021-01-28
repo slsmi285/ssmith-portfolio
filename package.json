@@ -4,7 +4,7 @@
   "description": "Sandy Smith Portfolio - Vanderbilt University Coding Bootcamp Graduate - Web  Developr",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "react-scripts start"
   },
   "repository": {
     "type": "git",
