@@ -68,9 +68,9 @@ const useStyles = makeStyles({
 
 });
 
-const menuIcons = {
+// const menuIcons = {
 
-}
+// }
 
 export default ({ close }) => {
   const classes = useStyles();
@@ -85,7 +85,7 @@ export default ({ close }) => {
         </div> */}
         <div className={classes.content}>
           <div>
-            <img className={classes.img} src={profile} alt="profile image" />
+            <img className={classes.img} src={profile} alt="profile" />
           </div>
           {" "}
       Aloha! I am Sandra Smith....East Tennessean/Hawaiian, Artist/Photographer, Gardener, and Full Stack Web Developer.  I am a recent graduate of Vanderbilt University Coding Bootcamp with a certificate in Full Stack Web Development.  

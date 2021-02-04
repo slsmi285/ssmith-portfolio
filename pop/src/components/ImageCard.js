@@ -1,8 +1,7 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { Collapse } from '@material-ui/core';
 import Projects from './Projects';
-import { Grid, GridList, Container } from '@material-ui/core';
+import { Grid, Container } from '@material-ui/core';
 import places from '../static/places';
 import Typography from '@material-ui/core/Typography';
 

@@ -2,9 +2,12 @@
   "name": "y",
   "version": "1.0.0",
   "description": "Sandy Smith Portfolio - Vanderbilt University Coding Bootcamp Graduate - Web  Developr",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "react-scripts start",
+    "build": "cd pop && npm run build",
+    "install-pop": "cd pop && npm install",
+    "heroku-postbuild": "npm run install-pop && npm run build",
+    "start": "node server.js",
     "pop": "cd pop && npm start",
     "dev": "concurrently -n 'server,pop' -c 'red,green' \"nodemon server.js\"\"npm run pop\""
   },

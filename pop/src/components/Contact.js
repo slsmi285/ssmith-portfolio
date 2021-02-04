@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.css";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import { Paper, Card, TextField, Typography, Button, Box, Grid } from '@material-ui/core';
-// import SendIcon from '@material-ui/core/Icon';
+import { Card, TextField, Typography, Button, Box, Grid } from '@material-ui/core';
+
 
 
 import profile2 from '../static/profile2.jpg';
@@ -132,7 +132,7 @@ export default ({ close }) => {
 <div className={classes.contactBox}>
   
         <div>
-          <img className={classes.contactImg} src={profile2} alt="profile image" />
+          <img className={classes.contactImg} src={profile2} alt="profile" />
         </div>
 
 
