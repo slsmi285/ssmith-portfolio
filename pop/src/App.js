@@ -1,11 +1,8 @@
 import React from 'react';
-// import { Route, Switch } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import Header from './components/Header';
-// import Modal from './components/Modal';
 import ModalContact from './components/ModalContact';
-
 import PlaceToVisit from './components/PlaceToVisit';
 
 
@@ -39,4 +36,6 @@ function App() {
 
 
 }
+
+
 export default App;
