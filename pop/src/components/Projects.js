@@ -8,10 +8,10 @@ import Button from '@material-ui/core/Button'
 // import Link from '@material-ui/core/Link';
 
 import Typography from '@material-ui/core/Typography';
-// import { Grid, Paper } from '@material-ui/core';
+
 import { Card } from '@material-ui/core';
 
-// import withStyles from "@material-ui/core/styles/withStyles"
+
 
 const styles = {
 fullHeightCard: {
