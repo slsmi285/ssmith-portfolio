@@ -7,9 +7,9 @@
     "build": "cd pop && npm run build",
     "install-pop": "cd pop && npm install",
     "heroku-postbuild": "npm run install-pop && npm run build",
-    "start": "node server.js",
+    "start": "serve -s build",
     "pop": "cd pop && npm start",
-    "dev": "concurrently -n 'server,pop' -c 'red,green' \"nodemon server.js\"\"npm run pop\""
+    "dev": "react-scripts start"
   },
   "repository": {
     "type": "git",

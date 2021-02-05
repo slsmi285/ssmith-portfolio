@@ -5,7 +5,7 @@ const morgan = requir('morgan');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 const routes = require('./routes/api');
 
@@ -47,4 +47,7 @@ app.get('/api/name', (req, res) => {
   res.json(data);
 });
 
-app.listn(PORT, console.log(`Server is starting at ${PORT}`));
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", 
+  this.address().port, app.settings.env);
+});
