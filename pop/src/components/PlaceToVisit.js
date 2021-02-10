@@ -11,12 +11,12 @@ import './style.css';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        minHeight: '80vh',
+        minHeight: '100vh',
         flexGrow: 1,
         display: 'flex',
         alignItems: 'flex-start',
         justifyContent: 'center',
-        // alignItems: 'center',
+        alignItems: 'center',
         [theme.breakpoints.down("md")]: {
             flexDirection: 'column',
     },

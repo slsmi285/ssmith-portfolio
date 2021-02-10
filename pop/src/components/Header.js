@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import Popup from 'reactjs-popup';
 import { AppBar, IconButton, Toolbar, Collapse } from '@material-ui/core';
+import clsx from 'clsx';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+import Divider from '@material-ui/core/Divider';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Button from "@material-ui/core/Button"
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
 import { Link as Scroll } from 'react-scroll';
 import ScrollTotop from './ScrollTotop';
 import Skills from './Skills';
-import Popup from 'reactjs-popup';
 import "./style.css";
 import Content from "./Content.js";
 import Contact from './Contact';
 
+const drawerWidth = 240;
 
 
 const useStyles = makeStyles((theme) => ({
@@ -105,10 +112,65 @@ const useStyles = makeStyles((theme) => ({
         cursor: 'pointer',
     },
 
+    appBar: {
+        transition: theme.transitions.create(['margin', 'width'], {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+        }),
+    },
+    appBarShift: {
+        width: `calc(100% - ${drawerWidth}px)`,
+        marginLeft: drawerWidth,
+        transition: theme.transitions.create(['margin', 'width'], {
+            easing: theme.transitions.easing.easeOut,
+            duration: theme.transitions.duration.enteringScreen,
+        }),
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
+    hide: {
+        display: 'none',
+    },
+    drawer: {
+        width: drawerWidth,
+        flexShrink: 0,
+        
+    },
+    drawerPaper: {
+        width: drawerWidth,
+        backgroundImage: `url(${process.env.PUBLIC_URL + './images/vcoffee.jpg'})`,
+    },
+    drawerHeader: {
+        // display: 'flex',
+        alignItems: 'center',
+        padding: theme.spacing(0, 1),
+        // necessary for content to be below app bar
+        ...theme.mixins.toolbar,
+        justifyContent: 'flex-end',
+    },
+    content: {
+        flexGrow: 1,
+        padding: theme.spacing(3),
+        transition: theme.transitions.create('margin', {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+        }),
+        marginLeft: -drawerWidth,
+    },
+    contentShift: {
+        transition: theme.transitions.create('margin', {
+            easing: theme.transitions.easing.easeOut,
+            duration: theme.transitions.duration.enteringScreen,
+        }),
+        marginLeft: 0,
+    },
 }));
 const Header = props => {
     const { history } = props;
     const classes = useStyles();
+    const theme = useTheme();
+    const [open, setOpen] = React.useState(false);
     const [checked, setChecked] = useState(false);
     useEffect(() => {
         setChecked(true);
@@ -116,6 +178,13 @@ const Header = props => {
 
     const handleOnLink = pageURL => {
         history.pushState(pageURL);
+    };
+    const handleDrawerOpen = () => {
+        setOpen(true);
+    };
+
+    const handleDrawerClose = () => {
+        setOpen(false);
     };
 
     return (
@@ -125,7 +194,44 @@ const Header = props => {
 
                     <Toolbar className={classes.appbarWrapper}>
 
-                        <h1 className={classes.appbarTitle}>Sandra Smith<span className={classes.colorText}>My Portfolio</span></h1>
+                        <IconButton
+                            color="inherit"
+                            aria-label="open drawer"
+                            onClick={handleDrawerOpen}
+                            edge="start"
+                            className={clsx(classes.menuButton, open && classes.hide)}
+                        >
+                            <ContactMailIcon />
+                        </IconButton>
+                        <Typography variant="h6" noWrap>
+                            Sandra Smith Portfolio
+                        </Typography>
+                        <Drawer
+                            className={classes.drawer}
+                            variant="persistent"
+                            anchor="left"
+                            open={open}
+                            classes={{
+                                paper: classes.drawerPaper,
+                            }}
+                        >
+                            <div className={classes.drawerHeader}>
+                                <IconButton onClick={handleDrawerClose}>
+                                    {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+                                </IconButton>
+                            </div>
+                            <Divider />
+                            <Contact />
+
+                        </Drawer>
+                        <main
+                            className={clsx(classes.content, {
+                                [classes.contentShift]: open,
+                            })}
+                        >
+
+                        </main>
+                        {/* </div> */}
 
                         <Typography className={classes.rootTwo}>
                             <Popup modal
@@ -133,11 +239,7 @@ const Header = props => {
                                     <h3>About Me</h3></button>}>
                                 {close => <Content close={close} />}
                             </Popup>
-                            <Popup modal trigger={<button className={classes.btnHeader}>
-                                <h3>Contact Me</h3>
-                            </button>}>
-                                {close => <Contact close={close} />}
-                            </Popup>
+                            
                             {<Button className={classes.btnHeader}>
                                 <a style={{ textDecoration: "none", color: "limegreen", textShadow: "-1px 1px black" }} href="/resume.pdf" target="_blank" ><h3>RESUME</h3></a>
                             </Button>}
@@ -175,7 +277,7 @@ const Header = props => {
                 </div>
             </Collapse>
 
-        </div>
+        </div >
     )
 };
 
