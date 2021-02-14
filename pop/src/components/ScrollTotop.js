@@ -12,9 +12,9 @@ class Scrolltotop extends Component {
     render() {
 
         return (
-            <div className="move-top-wrap">                 
-                <div onClick={this.ScrollTo} class="move-top" ><MdHome />Home</div> 
-            </div>
+                           
+        <div onClick={this.ScrollTo} style={{ color: 'limegreen', textShadow: '-1px 1px black'}} ><MdHome /> Back-to-Top</div> 
+            
         );
 
     }

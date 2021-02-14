@@ -7,7 +7,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import axios from 'axios';
 
 
-var Mailto = require('react-mailto');
+// var Mailto = require('react-mailto');
 
 
 
@@ -92,7 +92,8 @@ export default ({ close }) => {
             target="_top"
             rel="noopener noreferrer"
             
-          ><Mailto email="sls2code@gmail.com" obfuscate={true}></Mailto>
+          >
+            {/* <Mailto email="sls2code@gmail.com" obfuscate={true}></Mailto> */}
             <Typography variant="button" style={{ fontSize: '1rem', backgroundColor: 'transparent' }} >
               SEND EMAIL
             </Typography>

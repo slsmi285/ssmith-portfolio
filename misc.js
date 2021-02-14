@@ -1,39 +1,99 @@
-<Box component="div" elevation={8} square style={{ background: "#9c27b0", height: '65vh', width: '800px', border: "1px solid limegreen", padding: "50px", width: '100%' }}>
-<div className={classes.modalfoot}>
-<a className={classes.closefoot} onClick={close} >
-        &times; 
-    Close</a> 
-    </div>
-<Grid  style={{ marginTop: '30px', marginLeft: '25px' }} container>
-<Box component="form" className={classes.form}>
-<div>
-          {/* <img style={{ height: '40vh', float: 'left', marginRight: '20px', border: '4px double limegreen', hover: 'blue' }} src={profile2} alt="profile image" /> */}
-         
-        
-<Paper elevation={8} square style={{ minHeight: '40vh', width: '300px', backgroundColor: '#cccccc', float: 'right', border: '4px double limegreen' }}>
-<div>
-  <Card>
-  
-    <Typography variant="h5" style={{color: "limegreen", textAlign: "center", textTransform: "upperCase", backgroundColor: "#cccccc" }}>Contact Me</Typography>
-    <InputField fullWidth={true} label="Name" variant="outlined" inputProps={{ style: { color: "#cccccc" } }} margin="dense" size="large" />
-    <br /><br />
-    <InputField fullWidth={true} label="Email" variant="outlined" inputProps={{ style: { color: "#cccccc" } }} margin="dense" size="large" />
-    <br /><br />
-    <InputField fullWidth={true} label="Company" variant="outlined"inputProps={{ style: { color: "#cccccc" } }} margin="dense" size="large" />
-    <br /><br />
-    
-     <Button className={classes.btnSend} variant="outlined" fullWidth={true} endIcon={<SendIcon/>}>
-       contact me
-     </Button>
+import React, { Component } from "react";
+import "./style.css";
+// import { useStyles, makeStyles } from '@material-ui/core/styles';
+import { Box, Grid } from '@material-ui/core'; 
+import { Form, FormGroup, Input, Label } from 'reactstrap';
 
-</Card>
-</div>
-</Paper>
-    </div>
+// import axios from 'axios';
+
+class ContactForm extends Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            name: '',
+            email: '',
+            company: '',
+            message: '',
+            
+        }
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+   
+
+
+    render() {
+//         const classes = this.props.classes;
+//     }
+// }
+    return ( 
+
+        <Grid xs={12} container>
+            <Box>
+                <Form onSubmit={this.handleSubmit} style={{ width: '600px'}}>
+                    <FormGroup>
+                        <Label for="name">Name:</Label>
+                        <Input
+                        type="text"
+                        name="name"
+                        onChange={this.handleChange}
+                        value={this.state.feedback} />
+                        
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="email">Email:</Label>
+                        <Input
+                        type="email"
+                        name="email"
+                        onChange={this.handleChange}
+                        value={this.state.feedback} />
+                        
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="company">Company:</Label>
+                        <Input
+                        type="text"
+                        name="company"
+                        onChange={this.handleChange}
+                        value={this.state.feedback} />
+                        
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="message">Message:</Label>
+                        <Input
+                        type="textarea"
+                        name="message"
+                        onChange={this.handleChange}
+                        value={this.state.feedback} />
+                        
+                    </FormGroup>
+                    <Input type="Button" value="Submit"  onClick={this.handleSubmit} />
+                </Form>
+
+            </Box>
+
+        </Grid>
+
+    )
+    }
+    handleChange(event) {
+        this.setState({feedback: event.target.value})
+    }
+    handleSubmit(event) {
+        const templateId = 'template_Label';
+        this.sendFeedback(templateId, {message_html: this.state.feedback, from_name: this.state.name, reply_to: this.state.email})
+    }
+    sendFeedback (templateId, variables) {
+        window.emailjs.send(
+            'gmail', templateId,
+            variables
+        ).then(res => {
+            console.log(`Email successfully sent!`)
+        })
+        .catch(err => console.error('Sorry, your email was not sent. Error:', err))
+    }
     
-    
-    </Box>
-    </Grid>
-    </Box>
-  );
-};
+}
+export default ContactForm;
+

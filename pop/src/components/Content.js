@@ -9,13 +9,13 @@ const useStyles = makeStyles({
   root: {
     height: '100vh',
     marginTop: '5px',
-    backgroundColor: '#862d7e',
+    backgroundColor: 'black',
   },
   border: '2px solid #7ed321',
   img: {
     marginLeft: '5px',
     width: '200px',
-    height: '275px',
+    height: '300px',
     float: 'left',
     marginRight: '10px',
     padding: '3px',
@@ -38,7 +38,7 @@ const useStyles = makeStyles({
     right: '10px',
     top: '150px',
     fontSize: '11px',
-    border: '2px double #A4DD00',
+    border: '3px double #A4DD00',
     borderRadius: '8px',
     marginRight: '15px',
     webkitTransition: 'all 0.5s',
@@ -46,9 +46,13 @@ const useStyles = makeStyles({
     oTransition: 'all 0.5s',
     transition: 'all 0.5s',
    
-  
+    "&:hover": {
+      backgroundColor: "#ff0000",
+      color: "#ffffff",
+  },
 
   },
+  
  
   content: {
     width: '90%',
@@ -56,7 +60,7 @@ const useStyles = makeStyles({
     // paddingTop: '5px',
     // padding: '10px 5px',
     fontFamily: 'Raleway',
-    fontSize: '10px',
+    fontSize: '11px',
     // fontWeight: 'bold',
     float: 'right',
     marginTop: '20px',
