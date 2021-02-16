@@ -67,8 +67,11 @@ const InputField = withStyles({
   },
 })(TextField);
 
-export default ({ close }) => {
+export default function Contact() {
   const classes = useStyles();
+ 
+ 
+
   return (
 
     <Grid xs={12} className={classes.root} container>

@@ -18,6 +18,7 @@ import "./style.css";
 import Content from "./Content.js";
 import Contact from './Contact';
 
+
 const drawerWidth = 240;
 
 
@@ -254,6 +255,7 @@ const Header = props => {
 
                 </AppBar>
             </div>
+            
 
             <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapseHeight={50}>
                 <div className={classes.container}>
@@ -276,6 +278,8 @@ const Header = props => {
 
                 </div>
             </Collapse>
+        
+            
 
         </div >
     )
