@@ -171,7 +171,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 const Header = props => {
-    const { history } = props;
+    // const { history } = props;
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
@@ -180,9 +180,9 @@ const Header = props => {
         setChecked(true);
     }, []);
 
-    const handleOnLink = pageURL => {
-        history.pushState(pageURL);
-    };
+    // const handleOnLink = pageURL => {
+    //     history.pushState(pageURL);
+    // };
     const handleDrawerOpen = () => {
         setOpen(true);
     };

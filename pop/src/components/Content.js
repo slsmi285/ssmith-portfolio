@@ -76,7 +76,7 @@ const useStyles = makeStyles({
 
 // }
 
-export default ({ close }) => {
+const Content = ({ close }) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -132,3 +132,4 @@ export default ({ close }) => {
   );
 };
 
+export default Content;
