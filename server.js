@@ -35,21 +35,21 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-app.get('/api', (req, res) => {
-  const data = {
-    username: 'accimeesterlin',
-    age: 5
-  };
-  res.json(data);
-});
+// app.get('/api', (req, res) => {
+//   const data = {
+//     username: 'accimeesterlin',
+//     age: 5
+//   };
+//   res.json(data);
+// });
 
-app.get('/api/name', (req, res) => {
-  const data = {
-    username: 'peterson',
-    age: 5
-  };
-  res.json(data);
-});
+// app.get('/api/name', (req, res) => {
+//   const data = {
+//     username: 'peterson',
+//     age: 5
+//   };
+//   res.json(data);
+// });
 
 //Serve static assets if in production
 if(process.env.NODE_ENV === 'production') {

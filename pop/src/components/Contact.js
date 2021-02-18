@@ -37,7 +37,7 @@ export default function Contact() {
               fullWidth="true"
               size="medium"
               color="primary"
-              href={`https://linkedin.com/in/sandrasmith1548dev/`} target='_blank'>
+              href={`https://www.linkedin.com/in/sandrasmithdev1548`} target='_blank'>
               <LinkedInIcon />
             </Button>
           </CardActions>

@@ -1,5 +1,6 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
+import useState from 'react';
 import { Typography, Button, TextField } from '@material-ui/core';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 
@@ -62,23 +63,51 @@ const useStyles = makeStyles((theme) => ({
 export default function Form() {
 const classes = useStyles();
 
-    function sendEmail(e) {
+const [values, setValues] = useState({
+  name: '',
+  email: '',
+  company: '',
+  message: '',
+});
+const handleChange = (name)=> (e) => {
+  setValues({ ...values, [e.target.id]: e.target.value });
+};
+
+const isFormValid = () => {
+  if (!values.name || !values.email || !values.message) {
+
+return false;}
+else {
+return true;}
+
+};
+
+    const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('gmail', 'template_joqxle9', e.target, 'user_MU203xES78vTYM5MYEgpG')
+        emailjs.sendForm('gmail', 'template_nxtmezu', e.target, 'user_w7fuIoW9wFCVew5Q4ULw6')
             .then((result) => {
-                console.log(result.text);
+                console.log(result.text + 'functioning');
             }, (error) => {
-                console.log(error.text);
+                console.log(error.text + 'not functioning');
             });
         e.target.reset()
     }
+
+    const handleSubmit = (e) => {
+      e.preventDefault()
+      if (!isFormValid()) {
+        console.log('form not valid')
+      } else {
+        sendEmail(e)
+      }
+    };
 
 
 
     return (
         <div>
-        <form onSubmit={sendEmail}>
+        <form onSubmit={(e) => handleSubmit(e)}>
             {/* <input type="hidden" name="contact_number" /> */}
 
             <InputField 
@@ -86,7 +115,12 @@ const classes = useStyles();
             label="Name" 
             type="text"
             variant="outlined" 
-            inputProps={{ style: { color: "#cccccc" } }} 
+            inputProps={{ 
+              style: { color: "#cccccc" },
+              required: true,
+              onChange: handleChange(),
+              id: 'name',
+            }} 
             margin="dense" size="small" 
             name="name" />
 
@@ -95,7 +129,12 @@ const classes = useStyles();
             label="Email" 
             type="email"
             variant="outlined" 
-            inputProps={{ style: { color: "#cccccc" } }} 
+            inputProps={{ 
+              style: { color: "#cccccc" },
+              required: true,
+              onChange: handleChange(),
+              id: 'email',
+            }}
             margin="dense" size="small" 
             name="email" />
 
@@ -104,7 +143,12 @@ const classes = useStyles();
             label="Company" 
             type="text"
             variant="outlined" 
-            inputProps={{ style: { color: "#cccccc" } }} 
+            inputProps={{ 
+              style: { color: "#cccccc" },
+              required: true,
+              onChange: handleChange(),
+              id: 'company',
+            }}
             margin="dense" 
             size="small" 
             name="company" />
@@ -114,7 +158,12 @@ const classes = useStyles();
             label="Message" 
             variant="outlined" 
             type="textarea"
-            inputProps={{ style: { color: "#cccccc" } }} 
+            inputProps={{ 
+              style: { color: "#cccccc" },
+              required: true,
+              onChange: handleChange(),
+              id: 'message',
+            }} 
             margin="dense" size="small" 
             name="message" />
 
