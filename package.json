@@ -1,12 +1,12 @@
 {
-  "name": "y",
+  "name": "ssmith_portfolio",
   "version": "1.0.0",
-  "description": "Sandy Smith Portfolio - Vanderbilt University Coding Bootcamp Graduate - Web  Developr",
+  "description": "Sandy Smith Portfolio - Vanderbilt University Coding Bootcamp Graduate - Web Developer",
   "main": "app.js",
   "scripts": {
     "build": "cd pop && npm run build",
     "pop-install": "npm install --prefix pop",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false  npm install --prefix pop && npm run build --prefix pop",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix pop && npm run build --prefix pop",
     "start": "nodemon server.js",
     "pop": "npm start --prefix pop",
     "dev": "concurrently \"npm run server\" \"npm run pop\""
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/slsmi285/ssmith-portfolio.git"
   },
-  "author": "",
+  "author": "Sandra Smith",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/slsmi285/ssmith-portfolio/issues"
