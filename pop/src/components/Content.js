@@ -81,7 +81,7 @@ export default ({ close }) => {
   return (
     <div className={classes.root}>
       <div elevation={3} className={classes.modal}>
-        <a className={classes.close} onClick={close}>
+        <a href={() => false} className={classes.close} onClick={close}>
           &times;
           Close
     </a>

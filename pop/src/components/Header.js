@@ -81,11 +81,11 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         margin: '0 auto',
     },
-    icon: {
-        color: '#fff',
-        fontSize: '2rem',
+    // icon: {
+    //     color: '#fff',
+    //     // fontSize: '2rem',
 
-    },
+    // },
     colorText: {
         color: '#5AFF3D',
         textShadow: '-1px 1px #000',
@@ -140,7 +140,9 @@ const useStyles = makeStyles((theme) => ({
     },
     drawerPaper: {
         width: drawerWidth,
-        backgroundImage: `url(${process.env.PUBLIC_URL + './images/vcoffee.jpg'})`,
+        backgroundImage: `url(${process.env.PUBLIC_URL + './images/coffee.jpg'})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
     },
     drawerHeader: {
         // display: 'flex',
@@ -150,6 +152,7 @@ const useStyles = makeStyles((theme) => ({
         ...theme.mixins.toolbar,
         justifyContent: 'flex-end',
     },
+
     content: {
         flexGrow: 1,
         padding: theme.spacing(3),
@@ -217,7 +220,7 @@ const Header = props => {
                             }}
                         >
                             <div className={classes.drawerHeader}>
-                                <IconButton onClick={handleDrawerClose}>
+                                <IconButton style={{ fontSize: '3rem', color: 'white', fontShadow: '-1px 1px black' }} onClick={handleDrawerClose}>
                                     {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                                 </IconButton>
                             </div>

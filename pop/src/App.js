@@ -32,7 +32,7 @@ function App() {
 
       <CssBaseline />
       <div style={{ position: 'absolute' }}>
-        <Particles height="100vh" width="100vw" params={particlesConfig} />
+        <Particles width="100vw" params={particlesConfig} />
       </div>
       <Header />
 
