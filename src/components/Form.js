@@ -1,6 +1,6 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
-import useState from 'react';
+import { useState} from 'react';
 import { Typography, Button, TextField } from '@material-ui/core';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 
@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
 
     
 
-export default function Form() {
+export default function ContactForm() {
 const classes = useStyles();
 
 const [values, setValues] = useState({

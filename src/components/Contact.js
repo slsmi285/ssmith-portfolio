@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import Form from './Form';
+import ContactForm from './Form';
 import CardActions from '@material-ui/core/CardActions';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, Button, Box, Grid } from '@material-ui/core';
@@ -29,7 +29,7 @@ export default function Contact() {
       <Box>
         <Card component="form" className={classes.cntForm}>
           <h3 style={{ color: "limegreen", display: "center" }} variant="outlined" size="large" fullWidth="true">CONTACT ME</h3> 
-        <Form />
+      <ContactForm />
         </Card>
           <CardActions>
             <Button 
